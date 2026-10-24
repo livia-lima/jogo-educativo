@@ -1,0 +1,37 @@
+# GameMaker: arquivos e pastas de cache/temporários
+*.yyz
+*.yyp.bak
+*.yyz.bak
+*.tmp
+*.temp
+*.autosave
+*.bak
+*.swp
+*.swo
+
+# Builds e pacotes gerados
+releases/*
+!releases/.gitkeep
+build/
+dist/
+*.zip
+*.exe
+*.apk
+*.aab
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Arquivos locais e sensíveis
+.env
+.env.*
+!.env.example
+credentials.json
+*.keystore
+*.jks
+
+# Documentação interna — manter fora do repositório público
+planejamentoImplementacao.md
