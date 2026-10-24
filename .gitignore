@@ -10,8 +10,6 @@
 *.swo
 
 # Builds e pacotes gerados
-releases/*
-!releases/.gitkeep
 build/
 dist/
 *.zip

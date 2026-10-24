@@ -9,4 +9,4 @@ Crie aqui o arquivo `.yyp` e os recursos gerenciados pelo GameMaker.
 - **Plataforma de demonstração:** a definir até 26/10/2026
 - **Comando de execução:** abrir o `.yyp` e executar com `F6`
 
-Não versionar builds nesta pasta. Use `releases/` apenas para arquivos de demonstração locais, que já estão ignorados pelo Git.
+Não versionar builds nesta pasta. Guarde-as fora do repositório ou publique-as em GitHub Releases quando houver uma versão para demonstração.

@@ -32,7 +32,7 @@ O protótipo prioriza um ciclo pedagógico claro: o estudante recebe uma instru�
 | Build candidata | 10/11/2026 | ⏳ Planejado |
 | Entrega ao cliente | 12/11/2026 | ⏳ Planejado |
 
-O cronograma detalhado está em [planejamentoImplementacao.md](planejamentoImplementacao.md).
+O cronograma detalhado é mantido internamente pela equipe.
 
 ## Funcionalidades do protótipo
 
@@ -63,24 +63,14 @@ O cronograma detalhado está em [planejamentoImplementacao.md](planejamentoImple
 
 ```text
 .
-├── assets/                    # Arquivos-fonte que não pertencem diretamente ao GameMaker
-│   ├── audio/                 # Sons e narrações originais
-│   ├── exportados/            # Assets prontos para importar no jogo
-│   ├── fontes/                # Arquivos de tipografia licenciados
-│   └── fonte/                 # Arquivos editáveis de design
-├── docs/                      # Documentação da disciplina e do produto
-│   ├── arquitetura/           # Decisões técnicas
-│   ├── assets/                # Inventário e licenças de assets
-│   ├── apresentacao/          # Roteiro da demonstração
-│   └── testes/                # Casos de teste e evidências
-├── game/                      # Projeto GameMaker (.yyp e recursos gerados pelo motor)
-├── releases/                  # Builds locais; não versionadas
-├── tests/                     # Cenários de teste e regressão
-├── CONTRIBUTING.md            # Fluxo de colaboração da equipe
-└── planejamentoImplementacao.md
+├── game/                      # Projeto GameMaker completo
+├── docs/                      # Documentação pública essencial
+├── README.md                  # Visão geral e instruções do projeto
+├── LICENSE                    # Licença MIT
+└── .gitignore                 # Arquivos locais, builds e documentação interna
 ```
 
-Veja [docs/ESTRUTURA_PROJETO.md](docs/ESTRUTURA_PROJETO.md) para saber onde colocar cada arquivo e como iniciar o projeto GameMaker.
+Consulte [docs/README.md](docs/README.md) para saber o que pode ser guardado em `docs/`.
 
 ## Como executar
 
@@ -89,7 +79,7 @@ O jogo ainda está na etapa de estruturação. Após a primeira versão jogável
 1. Instale a versão do GameMaker registrada em `game/README.md`.
 2. Clone este repositório.
 3. Abra o arquivo `.yyp` dentro de `game/` pelo GameMaker.
-4. Execute com `F6` ou use a build disponível na área de *Releases*.
+4. Execute com `F6` ou use a build disponibilizada pela equipe.
 
 ## Acessibilidade e princípios de design
 
@@ -113,6 +103,13 @@ Esses princípios serão validados no ciclo de testes do protótipo; melhorias p
 | Desenvolvimento | Arquitetura, mecânica central, interface, integração e builds. |
 
 Os nomes e links dos integrantes serão adicionados quando a equipe autorizar a publicação.
+
+## Como contribuir
+
+1. Atualize a `main` antes de começar: `git switch main && git pull origin main`.
+2. Crie uma branch para cada tarefa, por exemplo: `git switch -c feat/tela-inicial`.
+3. Teste a mudança, envie a branch e abra um Pull Request para `main`.
+4. Peça a revisão de outro desenvolvedor antes do merge.
 
 ## Contexto acadêmico
 
