@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Livia (Entrada e Fase 1)",
-    "path":"folders/Livia (Entrada e Fase 1).yy",
+    "name":"sprites_Livia",
+    "path":"folders/Livia (Entrada e Fase 1)/sprites_Livia.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
