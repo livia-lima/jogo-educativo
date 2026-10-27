@@ -9,6 +9,7 @@
     {"name":"inst_4CED679","path":"rooms/rm_start_screen/rm_start_screen.yy",},
     {"name":"inst_4481DF1B","path":"rooms/rm_start_screen/rm_start_screen.yy",},
     {"name":"inst_473F1423","path":"rooms/rm_start_screen/rm_start_screen.yy",},
+    {"name":"inst_7C5073D","path":"rooms/rm_start_screen/rm_start_screen.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -16,6 +17,7 @@
         {"$GMRInstance":"v4","%Name":"inst_4CED679","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4CED679","objectId":{"name":"obj_botao_iniciar","path":"objects/obj_botao_iniciar/obj_botao_iniciar.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.0,"scaleY":3.0,"x":416.0,"y":352.0,},
         {"$GMRInstance":"v4","%Name":"inst_4481DF1B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4481DF1B","objectId":{"name":"obj_botao_ranking","path":"objects/obj_botao_ranking/obj_botao_ranking.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-0.5424856,"scaleX":4.5,"scaleY":2.5,"x":480.0,"y":448.0,},
         {"$GMRInstance":"v4","%Name":"inst_473F1423","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_473F1423","objectId":{"name":"obj_botao_encerrar_game","path":"objects/obj_botao_encerrar_game/obj_botao_encerrar_game.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":4.5,"x":-64.0,"y":-32.0,},
+        {"$GMRInstance":"v4","%Name":"inst_7C5073D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7C5073D","objectId":{"name":"obj_botao_relatorio","path":"objects/obj_botao_relatorio/obj_botao_relatorio.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":5.0,"x":1024.0,"y":-32.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
