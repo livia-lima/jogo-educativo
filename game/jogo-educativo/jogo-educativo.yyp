@@ -26,6 +26,7 @@
   "name":"jogo-educativo",
   "resources":[
     {"id":{"name":"obj_botao_iniciar","path":"objects/obj_botao_iniciar/obj_botao_iniciar.yy",},},
+    {"id":{"name":"obj_botao_ranking","path":"objects/obj_botao_ranking/obj_botao_ranking.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"rm_fase1_explicacao","path":"rooms/rm_fase1_explicacao/rm_fase1_explicacao.yy",},},
     {"id":{"name":"rm_fase1_falha","path":"rooms/rm_fase1_falha/rm_fase1_falha.yy",},},
@@ -40,6 +41,7 @@
     {"id":{"name":"rm_start_screen","path":"rooms/rm_start_screen/rm_start_screen.yy",},},
     {"id":{"name":"rm_submenu_relatorio","path":"rooms/rm_submenu_relatorio/rm_submenu_relatorio.yy",},},
     {"id":{"name":"spr_botao_iniciar","path":"sprites/spr_botao_iniciar/spr_botao_iniciar.yy",},},
+    {"id":{"name":"spr_botao_ranking","path":"sprites/spr_botao_ranking/spr_botao_ranking.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
