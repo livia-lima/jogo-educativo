@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_voz_dois",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.601,
+  "exportDir":"",
+  "name":"snd_voz_dois",
+  "parent":{
+    "name":"Joao (Explicações e Vitória)",
+    "path":"folders/Joao (Explicações e Vitória).yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"snd_voz_dois.ogg",
+  "volume":1.0,
+}
