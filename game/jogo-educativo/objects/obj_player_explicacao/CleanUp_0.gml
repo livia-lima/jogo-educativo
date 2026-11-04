@@ -1,3 +1,2 @@
-/// @description Libera vídeo e voz ao sair da sala
-parar_voz();
+/// @description Libera o vídeo ao sair da sala
 fechar_video();

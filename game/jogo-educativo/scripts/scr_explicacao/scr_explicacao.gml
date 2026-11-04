@@ -1,49 +1,58 @@
 /// Funções compartilhadas das telas de Explicação (Fase 1 e Fase 2) e da tela Parabéns.
-/// Responsável: João Vitor
+/// Responsável: João Vitor — layout conforme o Figma do projeto.
 ///
-/// Legendas: cada "deixa" (cue) tem início e fim em milissegundos, o texto
-/// e, opcionalmente, o nome de um som de voz (dublagem) tocado quando ela começa.
-/// O mesmo relógio (ms) controla legenda, voz e animação, então tudo fica sincronizado.
+/// Legendas: cada "deixa" (cue) tem início e fim em milissegundos e o texto.
+/// Nas telas de explicação o tempo é a posição do vídeo; na tela Parabéns é o
+/// relógio da própria tela, que também dispara a voz e as animações.
 
 #macro VIDEO_FASE1 "videos/fase1_explicacao.mp4"
 #macro VIDEO_FASE2 "videos/fase2_explicacao.mp4"
-#macro FONTE_JOGO_ARQUIVO "fonts/fonte_jogo.ttf"
 
-// Paleta (Coolors do README)
-#macro COR_VERDE_ESCURO make_colour_rgb(30, 96, 145)
+// Fontes do Figma (Included Files, licença OFL)
+#macro FONTE_PIXELIFY "fonts/PixelifySans.ttf"
+#macro FONTE_PRESS "fonts/PressStart2P.ttf"
+
+// Player de vídeo (medidas do Figma convertidas para a sala 1366x768)
+#macro PLAYER_X 296
+#macro PLAYER_W 822
+#macro PLAYER_H 519
+#macro PLAYER_BARRA_H 54
+
+// Caixa de legenda
+#macro LEGENDA_X 164
+#macro LEGENDA_Y 631
+#macro LEGENDA_W 1097
+#macro LEGENDA_H 125
+
+// Cores
 #macro COR_VERDE make_colour_rgb(82, 182, 154)
 #macro COR_VERDE_CLARO make_colour_rgb(217, 237, 146)
 #macro COR_LARANJA make_colour_rgb(243, 114, 44)
 #macro COR_AMARELO make_colour_rgb(249, 199, 79)
 #macro COR_VERMELHO make_colour_rgb(249, 65, 68)
 #macro COR_AZUL_ESCURO make_colour_rgb(24, 78, 119)
+#macro COR_PLAYER make_colour_rgb(58, 58, 58)
+#macro COR_PLAYER_BARRA make_colour_rgb(44, 44, 44)
+
+// ---------------------------------------------------------------- Legendas
 
 /// Cria uma deixa de legenda.
 function legenda(_ini, _fim, _texto, _voz = "") {
 	return { ini: _ini, fim: _fim, texto: _texto, voz: _voz, tocada: false };
 }
 
-/// Roteiro da tela 6 — Fase 1 Explicação (palavra x imagem).
+/// Legendas do vídeo da tela 6 — Fase 1 Explicação.
+/// Preencha quando o vídeo estiver pronto: tempos em milissegundos, contados
+/// a partir do início do vídeo. Exemplo:
+///   legenda(0, 4000, "Vamos jogar! Ligue a palavra à imagem certa."),
 function legendas_fase1() {
 	return [
-		legenda(    0,  4000, "Vamos jogar! Nesta fase você liga a PALAVRA à IMAGEM certa."),
-		legenda( 4000,  8500, "Pegue a palavra e arraste até a figura que combina com ela."),
-		legenda( 8500, 12000, "Bicicleta! Você acertou e ganhou uma moeda!", "snd_voz_bicicleta"),
-		legenda(12000, 16000, "Errou? Tudo bem! A palavra volta e você tenta de novo."),
-		legenda(16000, 19500, "Precisa de ajuda? Toque no botão de dica.", "snd_voz_dica"),
 	];
 }
 
-/// Roteiro da tela 9 — Fase 2 Explicação (contagem x número).
+/// Legendas do vídeo da tela 9 — Fase 2 Explicação (mesmo formato da Fase 1).
 function legendas_fase2() {
 	return [
-		legenda(    0,  4000, "Agora é hora de CONTAR!"),
-		legenda( 4000,  8000, "Olhe a cena e conte quantos objetos aparecem."),
-		legenda( 8000,  9000, "Um...", "snd_voz_um"),
-		legenda( 9000, 10000, "Dois...", "snd_voz_dois"),
-		legenda(10000, 11500, "Três!", "snd_voz_tres"),
-		legenda(11500, 15500, "Depois, toque no número certo. Aqui são 3 bicicletas!"),
-		legenda(15500, 19500, "Toque em um objeto para ouvir a contagem em voz alta."),
 	];
 }
 
@@ -53,17 +62,6 @@ function legenda_indice(_cues, _t) {
 		if (_t >= _cues[_i].ini && _t < _cues[_i].fim) return _i;
 	}
 	return -1;
-}
-
-/// Duração total (ms) de um roteiro.
-function legendas_duracao(_cues) {
-	var _n = array_length(_cues);
-	return (_n > 0) ? _cues[_n - 1].fim : 0;
-}
-
-/// Marca todas as deixas como não tocadas (para "ver de novo").
-function legendas_reiniciar(_cues) {
-	for (var _i = 0; _i < array_length(_cues); _i++) _cues[_i].tocada = false;
 }
 
 // ---------------------------------------------------------------- Áudio
@@ -82,21 +80,25 @@ function tocar_voz(_nome) {
 
 // ---------------------------------------------------------------- Texto
 
-/// Fonte com acentos carregada de Included Files (datafiles/fonts/fonte_jogo.ttf).
-/// Sem o arquivo, usa a fonte padrão (sem acentos) e o texto é "desacentuado".
-function fonte_jogo() {
-	if (!variable_global_exists("fonte_jogo_id")) {
-		global.fonte_jogo_id = -1;
-		if (file_exists(FONTE_JOGO_ARQUIVO)) {
-			global.fonte_jogo_id = font_add(FONTE_JOGO_ARQUIVO, 14, true, false, 32, 255);
+/// Fonte carregada de Included Files no tamanho pedido (com cache).
+/// Retorna -1 se o arquivo não existir (aí usa a fonte padrão, sem acentos).
+function fonte(_arquivo, _tamanho) {
+	if (!variable_global_exists("fontes_cache")) global.fontes_cache = {};
+	var _k = _arquivo + "#" + string(_tamanho);
+	if (!variable_struct_exists(global.fontes_cache, _k)) {
+		var _f = -1;
+		if (file_exists(_arquivo)) {
+			font_add_enable_aa(false); // pixel art nítido
+			_f = font_add(_arquivo, _tamanho, false, false, 32, 255);
+			font_add_enable_aa(true);
 		}
+		global.fontes_cache[$ _k] = _f;
 	}
-	return global.fonte_jogo_id;
+	return global.fontes_cache[$ _k];
 }
 
 /// A fonte padrão do GameMaker só tem ASCII: troca letras acentuadas.
-function texto_seguro(_s) {
-	if (fonte_jogo() != -1) return _s;
+function sem_acentos(_s) {
 	var _de   = "áàâãäéèêëíìîïóòôõöúùûüçÁÀÂÃÄÉÈÊËÍÌÎÏÓÒÔÕÖÚÙÛÜÇ";
 	var _para = "aaaaaeeeeiiiiooooouuuucAAAAAEEEEIIIIOOOOOUUUUC";
 	for (var _i = 1; _i <= string_length(_de); _i++) {
@@ -110,62 +112,52 @@ function escala_texto() {
 	return variable_global_exists("escala_fonte") ? global.escala_fonte : 1;
 }
 
-/// Desenha texto centralizado, com contorno (alto contraste) e quebra de linha.
-function desenhar_texto(_x, _y, _txt, _escala, _largura, _cor, _contorno, _alpha) {
-	var _f = fonte_jogo();
-	if (_f != -1) draw_set_font(_f);
-	draw_set_halign(fa_center);
+/// Seleciona a fonte e devolve o texto pronto para ela.
+function preparar_texto(_f, _txt) {
+	if (_f != -1) {
+		draw_set_font(_f);
+		return _txt;
+	}
+	return sem_acentos(_txt);
+}
+
+/// Texto com sombra deslocada (estilo do Figma). _halign: fa_left/fa_center/fa_right.
+/// _largura > 0 quebra linhas. Retorna a largura desenhada.
+function texto_sombra(_x, _y, _txt, _f, _escala, _cor, _sombra, _desloc, _halign = fa_center, _largura = -1, _alpha = 1) {
+	_txt = preparar_texto(_f, _txt);
+	draw_set_halign(_halign);
 	draw_set_valign(fa_middle);
-	_txt = texto_seguro(_txt);
-	var _sep = string_height("Ag") * 1.15;
-	var _w = _largura / _escala;
-	var _o = max(2, round(_escala * 1.2));
 	draw_set_alpha(_alpha);
-	draw_set_colour(_contorno);
-	for (var _dx = -1; _dx <= 1; _dx++) {
-		for (var _dy = -1; _dy <= 1; _dy++) {
-			if (_dx != 0 || _dy != 0) {
-				draw_text_ext_transformed(_x + _dx * _o, _y + _dy * _o, _txt, _sep, _w, _escala, _escala, 0);
-			}
-		}
+	var _sep = string_height("Ag");
+	var _w = (_largura > 0) ? _largura / _escala : 100000;
+	if (_desloc > 0) {
+		draw_set_colour(_sombra);
+		draw_text_ext_transformed(_x + _desloc, _y + _desloc, _txt, _sep, _w, _escala, _escala, 0);
 	}
 	draw_set_colour(_cor);
 	draw_text_ext_transformed(_x, _y, _txt, _sep, _w, _escala, _escala, 0);
+	var _larg = min(string_width(_txt), _w) * _escala;
 	draw_set_alpha(1);
 	draw_set_colour(c_white);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
+	return _larg;
 }
 
-/// Caixa de legenda na parte de baixo da tela.
-function desenhar_legenda(_texto, _alpha) {
-	if (_texto == "") return;
-	var _w = sprite_get_width(spr_caixa_legenda);
-	var _h = sprite_get_height(spr_caixa_legenda);
-	var _x = (room_width - _w) / 2;
-	var _y = room_height - _h - 10;
-	draw_sprite_ext(spr_caixa_legenda, 0, _x, _y, 1, 1, 0, c_white, _alpha * 0.95);
-	desenhar_texto(room_width / 2, _y + _h / 2, _texto, 2.2 * escala_texto(), _w - 120, c_black, c_white, _alpha);
+/// Largura que um texto terá com a fonte e escala dadas.
+function largura_texto(_txt, _f, _escala) {
+	_txt = preparar_texto(_f, _txt);
+	return string_width(_txt) * _escala;
 }
 
-// ---------------------------------------------------------------- Botões
+// ---------------------------------------------------------------- Interação
 
 function mouse_sobre(_x, _y, _w, _h) {
 	return point_in_rectangle(mouse_x, mouse_y, _x - _w / 2, _y - _h / 2, _x + _w / 2, _y + _h / 2);
 }
 
-/// Botão desenhado por código (centro em _x,_y). Retorna true se foi clicado.
-function botao_texto(_x, _y, _w, _h, _texto, _cor) {
-	var _sobre = mouse_sobre(_x, _y, _w, _h);
-	var _s = _sobre ? 1.06 : 1;
-	var _bw = _w * _s / 2, _bh = _h * _s / 2;
-	draw_set_colour(COR_AZUL_ESCURO);
-	draw_roundrect_ext(_x - _bw - 4, _y - _bh - 4, _x + _bw + 4, _y + _bh + 6, 24, 24, false);
-	draw_set_colour(_sobre ? merge_colour(_cor, c_white, 0.2) : _cor);
-	draw_roundrect_ext(_x - _bw, _y - _bh, _x + _bw, _y + _bh, 20, 20, false);
-	draw_set_colour(c_white);
-	desenhar_texto(_x, _y, _texto, 2 * _s, _w, c_white, COR_AZUL_ESCURO, 1);
-	return _sobre && mouse_check_button_pressed(mb_left);
+function clicou_em(_x1, _y1, _x2, _y2) {
+	return mouse_check_button_pressed(mb_left) && point_in_rectangle(mouse_x, mouse_y, _x1, _y1, _x2, _y2);
 }
 
 // ---------------------------------------------------------------- Animação
@@ -188,178 +180,74 @@ function progresso(_t, _ini, _fim) {
 	return clamp((_t - _ini) / max(1, _fim - _ini), 0, 1);
 }
 
-/// Ponteiro (seta) usado nas demonstrações.
-function desenhar_ponteiro(_x, _y) {
-	draw_set_colour(c_black);
-	draw_triangle(_x - 3, _y - 4, _x - 3, _y + 40, _x + 30, _y + 28, false);
-	draw_set_colour(c_white);
-	draw_triangle(_x, _y, _x, _y + 32, _x + 23, _y + 24, false);
+// ---------------------------------------------------------------- Player de vídeo
+
+/// "mm:ss" a partir de milissegundos.
+function formatar_tempo(_ms) {
+	var _s = floor(max(0, _ms) / 1000);
+	var _m = _s div 60;
+	_s = _s mod 60;
+	return string(_m) + ":" + ((_s < 10) ? "0" : "") + string(_s);
 }
 
-/// Bicicleta simples desenhada com formas (usada nas demonstrações).
-function desenhar_bicicleta(_x, _y, _s, _cor) {
-	draw_set_colour(c_black);
-	draw_circle(_x - 26 * _s, _y + 10 * _s, 16 * _s, true);
-	draw_circle(_x + 26 * _s, _y + 10 * _s, 16 * _s, true);
-	draw_circle(_x - 26 * _s, _y + 10 * _s, 15 * _s, true);
-	draw_circle(_x + 26 * _s, _y + 10 * _s, 15 * _s, true);
-	draw_set_colour(_cor);
-	draw_line_width(_x - 26 * _s, _y + 10 * _s, _x - 4 * _s, _y - 12 * _s, 4 * _s);
-	draw_line_width(_x - 4 * _s, _y - 12 * _s, _x + 20 * _s, _y - 12 * _s, 4 * _s);
-	draw_line_width(_x + 20 * _s, _y - 12 * _s, _x + 26 * _s, _y + 10 * _s, 4 * _s);
-	draw_line_width(_x - 26 * _s, _y + 10 * _s, _x, _y + 10 * _s, 4 * _s);
-	draw_line_width(_x, _y + 10 * _s, _x - 4 * _s, _y - 12 * _s, 4 * _s);
-	draw_line_width(_x, _y + 10 * _s, _x + 20 * _s, _y - 12 * _s, 4 * _s);
-	draw_set_colour(c_black);
-	draw_line_width(_x - 10 * _s, _y - 18 * _s, _x + 2 * _s, _y - 18 * _s, 4 * _s);
-	draw_line_width(_x + 16 * _s, _y - 22 * _s, _x + 26 * _s, _y - 22 * _s, 4 * _s);
-	draw_set_colour(c_white);
+/// Desenha o quadro do vídeo dentro da área, mantendo a proporção.
+function desenhar_video_na_area(_surf, _x, _y, _w, _h) {
+	var _sw = surface_get_width(_surf), _sh = surface_get_height(_surf);
+	var _s = min(_w / _sw, _h / _sh);
+	var _dw = _sw * _s, _dh = _sh * _s;
+	draw_surface_stretched(_surf, _x + (_w - _dw) / 2, _y + (_h - _dh) / 2, _dw, _dh);
 }
 
-/// Cartão de palavra (Fase 1).
-function desenhar_cartao(_x, _y, _texto, _cor_borda) {
-	draw_set_colour(_cor_borda);
-	draw_roundrect_ext(_x - 112, _y - 34, _x + 112, _y + 34, 16, 16, false);
+/// Botão grande de play (anel branco com triângulo), como no Figma.
+function desenhar_play_grande(_cx, _cy, _alpha) {
+	draw_set_alpha(_alpha);
 	draw_set_colour(c_white);
-	draw_roundrect_ext(_x - 106, _y - 28, _x + 106, _y + 28, 12, 12, false);
-	desenhar_texto(_x, _y, _texto, 2, 210, c_black, c_white, 1);
-}
-
-/// Demonstração animada da Fase 1 (usada quando não há vídeo).
-function demo_fase1(_t) {
-	var _cx = room_width / 2, _cy = 300;
-	var _a = progresso(_t, 0, 600);
-	var _px = _cx - 360, _py = _cy - 170;
-	draw_set_alpha(0.92 * _a);
-	draw_set_colour(c_white);
-	draw_roundrect_ext(_px, _py, _px + 720, _py + 340, 30, 30, false);
+	for (var _r = 0; _r < 5; _r++) draw_circle(_cx, _cy, 62 - _r, true);
+	draw_triangle(_cx - 20, _cy - 34, _cx - 20, _cy + 34, _cx + 38, _cy, false);
 	draw_set_alpha(1);
-	if (_a < 1) return;
-
-	// Coluna de imagens (esquerda) e de palavras (direita)
-	var _img_x = _cx - 180, _img_y = _cy;
-	var _alvo_ok = (_t >= 7500);
-	draw_set_colour(_alvo_ok ? COR_VERDE : COR_VERDE_CLARO);
-	draw_roundrect_ext(_img_x - 110, _img_y - 110, _img_x + 110, _img_y + 110, 20, 20, false);
-	desenhar_bicicleta(_img_x, _img_y - 20, 1.6, COR_LARANJA);
-
-	var _bob = sin(current_time / 300) * 4;
-	var _c1_ini_x = _cx + 200, _c1_ini_y = _cy - 70;
-	var _c2_ini_x = _cx + 200, _c2_ini_y = _cy + 70;
-
-	// Cartão "BICICLETA": arrastado até a imagem (4.5s a 7.5s)
-	var _p1 = suavizar(progresso(_t, 4500, 7500));
-	var _c1x = lerp(_c1_ini_x, _img_x, _p1);
-	var _c1y = lerp(_c1_ini_y + _bob, _img_y + 70, _p1);
-
-	// Cartão "CARRO": vai até a imagem e volta suave (erro, 12.5s a 15.5s)
-	var _ida = suavizar(progresso(_t, 12500, 13800));
-	var _volta = suavizar(progresso(_t, 14300, 15500));
-	var _p2 = _ida - _volta;
-	var _treme = (_t >= 13800 && _t < 14300) ? sin(_t / 25) * 8 : 0;
-	var _c2x = lerp(_c2_ini_x, _img_x + 40, _p2) + _treme;
-	var _c2y = lerp(_c2_ini_y - _bob, _img_y - 40, _p2);
-	var _erro = (_t >= 13800 && _t < 14600);
-
-	if (_t < 12000) {
-		desenhar_cartao(_c2x, _c2y, "CARRO", COR_AZUL_ESCURO);
-		desenhar_cartao(_c1x, _c1y, "BICICLETA", _alvo_ok ? COR_VERDE : COR_AZUL_ESCURO);
-	} else {
-		desenhar_cartao(_c1x, _c1y, "BICICLETA", COR_VERDE);
-		desenhar_cartao(_c2x, _c2y, "CARRO", _erro ? COR_VERMELHO : COR_AZUL_ESCURO);
-	}
-
-	// Moeda subindo depois do acerto (7.5s a 9.5s)
-	if (_t >= 7500 && _t < 9500) {
-		var _m = progresso(_t, 7500, 9500);
-		var _my = _img_y - 120 - _m * 80;
-		draw_set_alpha(1 - _m);
-		draw_set_colour(COR_AMARELO);
-		draw_circle(_img_x + 90, _my, 26, false);
-		draw_set_colour(COR_LARANJA);
-		draw_circle(_img_x + 90, _my, 26, true);
-		draw_set_alpha(1);
-		desenhar_texto(_img_x + 90, _my, "+50", 1.6, 80, c_black, COR_AMARELO, 1 - _m);
-	}
-
-	// Ponteiro acompanha o cartão que está sendo arrastado
-	if (_t >= 4000 && _t < 8000) desenhar_ponteiro(_c1x + 20, _c1y + 10);
-	if (_t >= 12000 && _t < 14300) desenhar_ponteiro(_c2x + 20, _c2y + 10);
-
-	// Botão de dica piscando (16s em diante)
-	if (_t >= 16000) {
-		var _pulso = 1 + sin(current_time / 150) * 0.08;
-		var _dx = _px + 660, _dy = _py + 50;
-		draw_set_colour(COR_AMARELO);
-		draw_circle(_dx, _dy, 34 * _pulso, false);
-		draw_set_colour(COR_LARANJA);
-		draw_circle(_dx, _dy, 34 * _pulso, true);
-		desenhar_texto(_dx, _dy, "?", 3 * _pulso, 60, c_white, COR_LARANJA, 1);
-		desenhar_ponteiro(_dx + 10, _dy + 10);
-	}
-	draw_set_colour(c_white);
 }
 
-/// Demonstração animada da Fase 2 (usada quando não há vídeo).
-function demo_fase2(_t) {
-	var _cx = room_width / 2, _cy = 300;
-	var _a = progresso(_t, 0, 600);
-	var _px = _cx - 400, _py = _cy - 170;
-	draw_set_alpha(0.92 * _a);
-	draw_set_colour(c_white);
-	draw_roundrect_ext(_px, _py, _px + 800, _py + 340, 30, 30, false);
-	draw_set_alpha(1);
-	if (_a < 1) return;
-
-	// Três bicicletas na cena; cada uma acende quando é contada
-	var _marcos = [8000, 9000, 10000];
-	for (var _i = 0; _i < 3; _i++) {
-		var _bx = _px + 120 + _i * 170;
-		var _by = _cy - 10 + ((_i == 1) ? -40 : 30);
-		var _contada = (_t >= _marcos[_i]);
-		var _pop = _contada ? 1 + 0.25 * (1 - progresso(_t, _marcos[_i], _marcos[_i] + 300)) : 1;
-		if (_contada) {
-			draw_set_colour(COR_VERDE_CLARO);
-			draw_circle(_bx, _by, 62 * _pop, false);
-		}
-		desenhar_bicicleta(_bx, _by, 1.2 * _pop, COR_VERDE);
-		if (_contada) {
-			desenhar_texto(_bx, _by - 70, string(_i + 1), 3, 60, COR_LARANJA, c_white, 1);
-		}
-		// Ponteiro "tocando" cada bicicleta durante a contagem
-		if (_t >= _marcos[_i] - 300 && _t < _marcos[_i] + 700 && _t < 11500) {
-			desenhar_ponteiro(_bx + 10, _by + 10);
-		}
+/// Ícones da barra de controles (brancos, centro em _x,_y).
+function icone_play(_x, _y) { draw_triangle(_x - 9, _y - 12, _x - 9, _y + 12, _x + 12, _y, false); }
+function icone_pausa(_x, _y) {
+	draw_rectangle(_x - 9, _y - 11, _x - 3, _y + 11, false);
+	draw_rectangle(_x + 3, _y - 11, _x + 9, _y + 11, false);
+}
+function icone_anterior(_x, _y) {
+	draw_rectangle(_x - 11, _y - 11, _x - 8, _y + 11, false);
+	draw_triangle(_x + 11, _y - 12, _x + 11, _y + 12, _x - 7, _y, false);
+}
+function icone_proximo(_x, _y) {
+	draw_triangle(_x - 11, _y - 12, _x - 11, _y + 12, _x + 7, _y, false);
+	draw_rectangle(_x + 8, _y - 11, _x + 11, _y + 11, false);
+}
+function icone_volume(_x, _y, _mudo) {
+	draw_rectangle(_x - 11, _y - 5, _x - 5, _y + 5, false);
+	draw_triangle(_x - 5, _y - 5, _x + 5, _y - 12, _x + 5, _y + 12, false);
+	draw_triangle(_x - 5, _y - 5, _x + 5, _y + 12, _x - 5, _y + 5, false);
+	if (_mudo) {
+		draw_set_colour(COR_VERMELHO);
+		draw_line_width(_x - 13, _y - 13, _x + 9, _y + 13, 3);
+		draw_set_colour(c_white);
 	}
+}
+function icone_tela_cheia(_x, _y) {
+	var _a = 12, _l = 7, _e = 3;
+	draw_rectangle(_x - _a, _y - _a, _x - _a + _l, _y - _a + _e, false);
+	draw_rectangle(_x - _a, _y - _a, _x - _a + _e, _y - _a + _l, false);
+	draw_rectangle(_x + _a - _l, _y - _a, _x + _a, _y - _a + _e, false);
+	draw_rectangle(_x + _a - _e, _y - _a, _x + _a, _y - _a + _l, false);
+	draw_rectangle(_x - _a, _y + _a - _e, _x - _a + _l, _y + _a, false);
+	draw_rectangle(_x - _a, _y + _a - _l, _x - _a + _e, _y + _a, false);
+	draw_rectangle(_x + _a - _l, _y + _a - _e, _x + _a, _y + _a, false);
+	draw_rectangle(_x + _a - _e, _y + _a - _l, _x + _a, _y + _a, false);
+}
 
-	// Opções de número na lateral
-	var _ops = [2, 3, 4];
-	var _escolha = (_t >= 13500);
-	for (var _j = 0; _j < 3; _j++) {
-		var _nx = _px + 700, _ny = _py + 70 + _j * 100;
-		var _certo = _escolha && (_ops[_j] == 3);
-		draw_set_colour(_certo ? COR_VERDE : COR_AZUL_ESCURO);
-		draw_roundrect_ext(_nx - 44, _ny - 40, _nx + 44, _ny + 40, 18, 18, false);
-		desenhar_texto(_nx, _ny, string(_ops[_j]), 3.5, 80, c_white, c_black, 1);
+/// Caixa de legenda (sempre visível, como no Figma); o texto aparece quando há fala.
+function desenhar_caixa_legenda(_texto, _alpha) {
+	draw_sprite_stretched(spr_caixa_legenda, 0, LEGENDA_X, LEGENDA_Y, LEGENDA_W, LEGENDA_H);
+	if (_texto != "") {
+		texto_sombra(LEGENDA_X + LEGENDA_W / 2, LEGENDA_Y + LEGENDA_H / 2, _texto, fonte(FONTE_PRESS, 20), escala_texto(),
+			COR_AMARELO, c_black, 3, fa_center, LEGENDA_W - 90, _alpha);
 	}
-
-	// Ponteiro vai até o número 3 (11.5s a 13.5s)
-	if (_t >= 11500 && _t < 15500) {
-		var _p = suavizar(progresso(_t, 11500, 13300));
-		desenhar_ponteiro(lerp(_px + 460, _px + 700, _p), lerp(_cy + 120, _py + 170, _p));
-	}
-
-	// Dica de acessibilidade: "toque para ouvir"
-	if (_t >= 15500) {
-		var _bx2 = _px + 120;
-		var _by2 = _cy + 20;
-		var _onda = (current_time mod 900) / 900;
-		draw_set_alpha(1 - _onda);
-		draw_set_colour(COR_LARANJA);
-		draw_circle(_bx2, _by2, 40 + _onda * 50, true);
-		draw_circle(_bx2, _by2, 41 + _onda * 50, true);
-		draw_set_alpha(1);
-		desenhar_ponteiro(_bx2 + 10, _by2 + 10);
-	}
-	draw_set_colour(c_white);
 }
