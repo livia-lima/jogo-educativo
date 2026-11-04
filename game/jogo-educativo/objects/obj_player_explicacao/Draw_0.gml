@@ -1,46 +1,58 @@
-/// @description Fundo, vídeo (ou animação), legenda e botões
+/// @description Fundo, player de vídeo (layout do Figma) e caixa de legenda
+draw_sprite(fundo, 0, 0, 0);
 
-// Fundo com zoom lento (efeito "Ken Burns") para dar vida à tela
-var _zoom = 1 + 0.04 * (tempo / max(1, duracao));
-draw_sprite_ext(fundo, 0, -(_zoom - 1) * room_width / 2, -(_zoom - 1) * room_height / 2, _zoom, _zoom, 0, c_white, 1);
+var _px = PLAYER_X, _py = player_y, _pw = PLAYER_W, _ph = PLAYER_H;
+var _area_h = _ph - PLAYER_BARRA_H;
+var _by = _py + _ph - PLAYER_BARRA_H / 2;
 
-// Título da fase
-desenhar_texto(room_width / 2, 52, titulo, 2.6 * escala_texto(), room_width - 320, c_white, COR_AZUL_ESCURO, 1);
-
-// Vídeo ou animação de demonstração
+// Área do vídeo
+draw_set_colour(COR_PLAYER);
+draw_rectangle(_px, _py, _px + _pw, _py + _ph, false);
 if (usando_video) {
 	var _v = video_draw();
-	if (_v[0] == 0 && surface_exists(_v[1])) {
-		var _sw = surface_get_width(_v[1]);
-		var _sh = surface_get_height(_v[1]);
-		var _s  = min(900 / _sw, 440 / _sh);
-		var _dw = _sw * _s, _dh = _sh * _s;
-		var _x  = (room_width - _dw) / 2, _y = 95;
-		draw_set_colour(COR_AZUL_ESCURO);
-		draw_roundrect_ext(_x - 10, _y - 10, _x + _dw + 10, _y + _dh + 10, 20, 20, false);
-		draw_set_colour(c_white);
-		draw_surface_stretched(_v[1], _x, _y, _dw, _dh);
-	} else {
-		desenhar_texto(room_width / 2, 300, "Carregando vídeo...", 2, 600, c_white, COR_AZUL_ESCURO, 1);
-	}
+	if (_v[0] == 0 && surface_exists(_v[1])) desenhar_video_na_area(_v[1], _px, _py, _pw, _area_h);
 }
-if (!usando_video) {
-	demo(tempo);
-}
+if (!tocando) desenhar_play_grande(_px + _pw / 2, _py + _area_h / 2, 1);
 
-// Legenda sincronizada (entra e sai com fade curto)
+// Barra de controles
+draw_set_colour(COR_PLAYER_BARRA);
+draw_rectangle(_px, _py + _area_h, _px + _pw, _py + _ph, false);
+draw_set_colour(c_white);
+if (tocando) icone_pausa(_px + 22, _by); else icone_play(_px + 22, _by);
+icone_anterior(_px + 55, _by);
+icone_proximo(_px + 90, _by);
+
+var _f = fonte(FONTE_PIXELIFY, 12);
+texto_sombra(_px + 110, _by, formatar_tempo(tempo), _f, 1, c_white, c_black, 0, fa_left);
+
+// Barra de progresso: parte assistida (branca), restante (cinza) e marcador
+var _bx1 = _px + 155, _bx2 = _px + 630;
+var _p = (duracao > 0) ? clamp(tempo / duracao, 0, 1) : 0;
+var _mx = lerp(_bx1, _bx2, _p);
+draw_set_colour(make_colour_rgb(110, 110, 110));
+draw_rectangle(_bx1, _by - 3, _bx2, _by + 3, false);
+draw_set_colour(c_white);
+draw_rectangle(_bx1, _by - 3, _mx, _by + 3, false);
+draw_circle(_mx, _by, 9, false);
+
+texto_sombra(_px + 642, _by, formatar_tempo(duracao), _f, 1, c_white, c_black, 0, fa_left);
+texto_sombra(_px + 680, _by, "HD", _f, 1, c_white, c_black, 0, fa_left);
+
+// Volume: ícone + 5 barrinhas (preenchidas conforme o volume)
+icone_volume(_px + 716, _by, mudo);
+var _nivel = mudo ? 0 : round(obter_volume() * 5);
+for (var _i = 0; _i < 5; _i++) {
+	draw_set_colour((_i < _nivel) ? c_white : make_colour_rgb(110, 110, 110));
+	draw_rectangle(_px + 731 + _i * 9, _by - 6, _px + 737 + _i * 9, _by + 6, false);
+}
+draw_set_colour(c_white);
+icone_tela_cheia(_px + 799, _by);
+
+// Legenda
+var _texto = "", _alpha = 1;
 if (cue_atual != -1) {
 	var _c = cues[cue_atual];
-	var _alpha = min(progresso(tempo, _c.ini, _c.ini + 250), 1 - progresso(tempo, _c.fim - 200, _c.fim));
-	desenhar_legenda(_c.texto, max(_alpha, 0.15));
+	_texto = _c.texto;
+	_alpha = max(0.15, min(progresso(tempo, _c.ini, _c.ini + 250), 1 - progresso(tempo, _c.fim - 200, _c.fim)));
 }
-
-// Botões
-if (!terminou) {
-	if (botao_texto(room_width - 120, 52, 190, 64, "Pular", COR_LARANJA)) sair();
-} else {
-	desenhar_texto(room_width / 2, 585, "Agora é a sua vez!", 2.8 * escala_texto(), 900, COR_AMARELO, COR_AZUL_ESCURO, 1);
-	var _pulso = 1 + sin(current_time / 200) * 0.04;
-	if (botao_texto(room_width / 2 - 200, 680, 300, 90, "Ver de novo", COR_AZUL_ESCURO)) iniciar();
-	if (botao_texto(room_width / 2 + 200, 680, 300 * _pulso, 90 * _pulso, "Começar!", COR_VERDE)) sair();
-}
+desenhar_caixa_legenda(_texto, _alpha);

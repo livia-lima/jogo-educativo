@@ -1,37 +1,37 @@
 /// @description Tela 12 — Parabéns (vitória)
-// "Parabéns! Sua pontuação foi: …" + botões "Ver ranking" e "Voltar ao menu".
-// Legendas, dublagem e animações seguem o mesmo relógio (tempo, em ms).
+// Layout conforme o Figma: quadro com "Parabéns!" e "Sua pontuação foi: N",
+// botões "Ver ranking" e "Voltar ao menu" um embaixo do outro.
+// Voz e animações seguem o mesmo relógio (tempo, em ms).
 
 tempo = 0;
 pontos_final     = variable_global_exists("pontuacao") ? global.pontuacao : 0;
 pontos_mostrados = 0;
-var _nome = (variable_global_exists("nome_aluno") && global.nome_aluno != "") ? global.nome_aluno : "";
-titulo = (_nome != "") ? "Parabéns, " + _nome + "!" : "Parabéns!";
+titulo = "Parabéns!";
 
-// Linha do tempo (ms): cada animação começa junto com a legenda correspondente
-t_titulo         = 300;   // título entra pulando + voz "Parabéns"
-t_contagem_ini   = 2600;  // placar sobe de 0 até a pontuação final
-t_contagem_fim   = 4600;
-t_botoes         = 6000;  // botões aparecem
+// Linha do tempo (ms)
+t_titulo         = 300;   // quadro entra pulando + voz "Parabéns"
+t_contagem_ini   = 1300;  // placar sobe de 0 até a pontuação final
+t_contagem_fim   = 2900;
+t_botoes         = 3100;  // botões aparecem
 
+// Deixas de voz sincronizadas com as animações
 cues = [
-	legenda(t_titulo,       t_contagem_ini, titulo, "snd_voz_parabens"),
-	legenda(t_contagem_ini, t_botoes,       "Sua pontuação foi: " + string(pontos_final) + " pontos!"),
-	legenda(t_botoes,       t_botoes + 4000, "Toque em \"Ver ranking\" ou em \"Voltar ao menu\"."),
+	legenda(t_titulo, t_contagem_ini, titulo, "snd_voz_parabens"),
 ];
 cue_atual = -1;
 voz_atual = -1;
 
-// Botões (sprites com origem no centro)
+// Botões (sprites com origem no centro), posições e tamanho do Figma
+escala_botao = 0.84;
 botoes = [
-	{ spr: spr_botao_ver_ranking, x: room_width / 2 - 240, y: 400, voz: "snd_voz_ranking",     sala: rm_leaderboard,  sobre: false },
-	{ spr: spr_botao_voltar_menu, x: room_width / 2 + 240, y: 400, voz: "snd_voz_voltar_menu", sala: rm_start_screen, sobre: false },
+	{ spr: spr_botao_ver_ranking, x: 679, y: 398, voz: "snd_voz_ranking",     sala: rm_leaderboard,  sobre: false },
+	{ spr: spr_botao_voltar_menu, x: 679, y: 552, voz: "snd_voz_voltar_menu", sala: rm_start_screen, sobre: false },
 ];
 
 // Confetes
 var _cores = [COR_VERDE, COR_AMARELO, COR_LARANJA, COR_VERMELHO, COR_VERDE_CLARO, c_white];
 confetes = [];
-for (var _i = 0; _i < 90; _i++) {
+for (var _i = 0; _i < 50; _i++) {
 	array_push(confetes, {
 		x:   random(room_width),
 		y:   -random(room_height),

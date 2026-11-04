@@ -2,7 +2,7 @@
 var _dt = delta_time / 1000000;
 tempo += delta_time / 1000;
 
-// Legenda + dublagem sincronizadas
+// Voz sincronizada com as animações
 var _i = legenda_indice(cues, tempo);
 if (_i != cue_atual) {
 	cue_atual = _i;
@@ -34,7 +34,7 @@ for (var _c = 0; _c < array_length(confetes); _c++) {
 if (tempo >= t_botoes) {
 	for (var _b = 0; _b < array_length(botoes); _b++) {
 		var _bt = botoes[_b];
-		var _w = sprite_get_width(_bt.spr), _h = sprite_get_height(_bt.spr);
+		var _w = sprite_get_width(_bt.spr) * escala_botao, _h = sprite_get_height(_bt.spr) * escala_botao;
 		var _sobre = mouse_sobre(_bt.x, _bt.y, _w, _h);
 		if (_sobre && !_bt.sobre) {
 			parar_voz();
