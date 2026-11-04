@@ -21,11 +21,15 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.100.0.1182",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"jogo-educativo",
   "resources":[
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
+    {"id":{"name":"obj_falha_tela","path":"objects/obj_falha_tela/obj_falha_tela.yy",},},
+    {"id":{"name":"obj_fase2_botao","path":"objects/obj_fase2_botao/obj_fase2_botao.yy",},},
+    {"id":{"name":"obj_fase2_controle","path":"objects/obj_fase2_controle/obj_fase2_controle.yy",},},
+    {"id":{"name":"obj_fase2_item","path":"objects/obj_fase2_item/obj_fase2_item.yy",},},
     {"id":{"name":"rm_fase1_explicacao","path":"rooms/rm_fase1_explicacao/rm_fase1_explicacao.yy",},},
     {"id":{"name":"rm_fase1_falha","path":"rooms/rm_fase1_falha/rm_fase1_falha.yy",},},
     {"id":{"name":"rm_fase1_gameplay","path":"rooms/rm_fase1_gameplay/rm_fase1_gameplay.yy",},},
