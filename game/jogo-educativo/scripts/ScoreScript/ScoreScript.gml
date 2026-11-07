@@ -17,12 +17,11 @@ Pontuação total com apenas 1x: 600
 Pontuação total com mult máximo: 2100
 
 // --- ---=--- -- */
-// Utilize FaseTimeStart ao iniciar uma fase para iniciar o sistema. Informe qual fase (1 ou 2) como argumento.
-// Pontuou para adicionar pontos por acerto, Errou para contabilizar um erro.
-// 12 erros resultam em uma tela de falha.
-
-// time source para cronometragem de tempo
-
+// Utilize FaseTimeStart ao iniciar uma fase para inicializar o sistema. Informe qual fase (1 ou 2) como argumento.
+// Pontuou() para adicionar pontos por acerto, Errou() para contabilizar um erro.
+// X erros resultam em uma tela de falha.
+// Há 2 porções de código abaixo que podem ser mexidas para executar 
+// comandos imediatamente após o jogador finalizar o último acerto da fase.
 
 function resetaMult()
 {
@@ -58,22 +57,29 @@ function Pontuou()
 	newTime = [current_hour,current_minute,current_second];
 	timeDiff = (newTime[0]*3600 + newTime[1]*60 + newTime[2])-(global._time[0]*3600 + global._time[1]*60 + global._time[2])
 	global._time = newTime; // novo time.
-	//if (room = rm_fase1_gameplay)
-	//{
+	if (room = rm_fase1_gameplay)
+	{
 		global.tempoEntreAcertos_fase1[global.acertos_fase1] = timeDiff;
 		global.acertos_fase1++;
 		
-		if (global.acertos_fase1 >= 6)
+		if (global.acertos_fase1 >= global.acertosParaFimDeFase) // level completed, get total time
 		{
 			global.tempoGasto_fase1 = newTime[0]*3600 + newTime[1]*60 + newTime[2] - (global._faseStart1[0]*3600 + global._faseStart1[1]*60 + global._faseStart1[2])
-			game_end() // remover depois
+			
+			// CODIGO Q RODA AO FINALIZAR TODOS OS ACERTOS DE UMA FASE
 		}
-	//}
-	//else if (room = rm_fase2_gameplay)
-	//{
-	//	global.tempoEntreAcertos_fase2[global.acertos_fase2] = timeDiff;
-	//	global.acertos_fase2++;
-	//}
+	}
+	else if (room = rm_fase2_gameplay)
+	{
+		global.tempoEntreAcertos_fase2[global.acertos_fase2] = timeDiff;
+		global.acertos_fase2++;
+			if (global.acertos_fase2 >= global.acertosParaFimDeFase) // level completed, get total time
+		{
+			global.tempoGasto_fase2 = newTime[0]*3600 + newTime[1]*60 + newTime[2] - (global._faseStart2[0]*3600 + global._faseStart2[1]*60 + global._faseStart2[2])
+			SaveGameConclude()
+			// CODIGO Q RODA AO FINALIZAR TODOS OS ACERTOS DE UMA FASE
+		}
+	}
 	
 }
 
@@ -85,8 +91,7 @@ function Errou()
 	else
 		global.erros_fase2++;
 	resetaMult()
-	/*
-	if (global._Erros >= 12)
+	if (global._Erros >= global.errosParaFimDeFase)
 	{
 		if (room = rm_fase1_gameplay)
 		{
@@ -96,5 +101,5 @@ function Errou()
 		{
 			room_goto(rm_fase2_falha);
 		}
-	}*/
+	}
 }

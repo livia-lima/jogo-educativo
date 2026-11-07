@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite9",
-    "path":"sprites/Sprite9/Sprite9.yy",
+    "name":"spr_returnButton",
+    "path":"sprites/spr_returnButton/spr_returnButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,

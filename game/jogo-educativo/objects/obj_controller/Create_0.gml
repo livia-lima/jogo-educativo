@@ -7,6 +7,7 @@ global.CONTROLLER = self;
 global.nome_aluno = "";
 global.pontuacao = 0;
 global.faseAtual = 0; // indicador de fase. (0 = nenhuma)
+global.alvoDeLeitura = "";
 
 global._tempoMult = time_source_create(time_source_game,30,time_source_units_seconds,resetaMult)
 // ^ timer para reset de mult.
@@ -30,6 +31,10 @@ global.tempoGasto_fase2 = 0;
 global.tempoEntreAcertos_fase2 = [0,0,0,0,0,0];
 global.tentativas_fase2 = 0; // incrementar quando tentar a fase 2 novamente
 
+global.acertosParaFimDeFase = 6
+global.errosParaFimDeFase = 12
+
+if (!file_exists("ranking.txt")) gerarRanking() // gera um ranking placeholder
 // Controle de Rodadas
 global.round_atual_fase1 = 1;
 global.total_rounds_fase1 = 3; // Ajuste conforme a duração desejada

@@ -8,8 +8,8 @@
   "name":"obj_botaoRelatorio",
   "overriddenProperties":[],
   "parent":{
-    "name":"Vitor (Regras e Dados)",
-    "path":"folders/Vitor (Regras e Dados).yy",
+    "name":"relatorioMain",
+    "path":"folders/Vitor (Regras e Dados)/relatorioMain.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite10",
-    "path":"sprites/Sprite10/Sprite10.yy",
+    "name":"spr_botaoRelatorio",
+    "path":"sprites/spr_botaoRelatorio/spr_botaoRelatorio.yy",
   },
   "spriteMaskId":null,
   "visible":true,
