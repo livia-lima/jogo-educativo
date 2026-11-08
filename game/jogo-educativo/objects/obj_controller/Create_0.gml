@@ -17,6 +17,10 @@ global.total_rounds_fase1 = 3; // Ajuste conforme a duração desejada
 global.rodada_rounds_fase2 = 1;
 global.total_rounds_fase2 = 3;
 
+//Controle do volume e escala da fonte
+global.volume_jogo = 1; // Vai de 0 (mudo) a 1 (máximo)
+global.escala_fonte = 1; // Multiplicador para o tamanho do texto
+
 // Banco de Dados dos Elementos (Base para a sua Fase 1 e a Fase 2 da Yasmin)
 // O "frame" deve corresponder à subimagem exata no spr_elementos
 global.elementos = [
