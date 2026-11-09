@@ -17,7 +17,12 @@
     {"$GMFolder":"","%Name":"Yasmin (Fase 2 e Falhas)","folderPath":"folders/Yasmin (Fase 2 e Falhas).yy","name":"Yasmin (Fase 2 e Falhas)","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"OFL_PixelifySans.txt","CopyToMask":-1,"filePath":"datafiles/fonts","name":"OFL_PixelifySans.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"OFL_PressStart2P.txt","CopyToMask":-1,"filePath":"datafiles/fonts","name":"OFL_PressStart2P.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"PixelifySans.ttf","CopyToMask":-1,"filePath":"datafiles/fonts","name":"PixelifySans.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"PressStart2P.ttf","CopyToMask":-1,"filePath":"datafiles/fonts","name":"PressStart2P.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -26,10 +31,15 @@
   "name":"jogo-educativo",
   "resources":[
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
+
     {"id":{"name":"obj_falha_tela","path":"objects/obj_falha_tela/obj_falha_tela.yy",},},
     {"id":{"name":"obj_fase2_botao","path":"objects/obj_fase2_botao/obj_fase2_botao.yy",},},
     {"id":{"name":"obj_fase2_controle","path":"objects/obj_fase2_controle/obj_fase2_controle.yy",},},
     {"id":{"name":"obj_fase2_item","path":"objects/obj_fase2_item/obj_fase2_item.yy",},},
+
+    {"id":{"name":"obj_player_explicacao","path":"objects/obj_player_explicacao/obj_player_explicacao.yy",},},
+    {"id":{"name":"obj_tela_parabens","path":"objects/obj_tela_parabens/obj_tela_parabens.yy",},},
+
     {"id":{"name":"rm_fase1_explicacao","path":"rooms/rm_fase1_explicacao/rm_fase1_explicacao.yy",},},
     {"id":{"name":"rm_fase1_falha","path":"rooms/rm_fase1_falha/rm_fase1_falha.yy",},},
     {"id":{"name":"rm_fase1_gameplay","path":"rooms/rm_fase1_gameplay/rm_fase1_gameplay.yy",},},
@@ -42,6 +52,17 @@
     {"id":{"name":"rm_relatorio","path":"rooms/rm_relatorio/rm_relatorio.yy",},},
     {"id":{"name":"rm_start_screen","path":"rooms/rm_start_screen/rm_start_screen.yy",},},
     {"id":{"name":"rm_submenu_relatorio","path":"rooms/rm_submenu_relatorio/rm_submenu_relatorio.yy",},},
+    {"id":{"name":"scr_explicacao","path":"scripts/scr_explicacao/scr_explicacao.yy",},},
+    {"id":{"name":"snd_voz_parabens","path":"sounds/snd_voz_parabens/snd_voz_parabens.yy",},},
+    {"id":{"name":"snd_voz_ranking","path":"sounds/snd_voz_ranking/snd_voz_ranking.yy",},},
+    {"id":{"name":"snd_voz_voltar_menu","path":"sounds/snd_voz_voltar_menu/snd_voz_voltar_menu.yy",},},
+    {"id":{"name":"spr_bg_fase1_explicacao","path":"sprites/spr_bg_fase1_explicacao/spr_bg_fase1_explicacao.yy",},},
+    {"id":{"name":"spr_bg_fase2_explicacao","path":"sprites/spr_bg_fase2_explicacao/spr_bg_fase2_explicacao.yy",},},
+    {"id":{"name":"spr_bg_parabens","path":"sprites/spr_bg_parabens/spr_bg_parabens.yy",},},
+    {"id":{"name":"spr_botao_ver_ranking","path":"sprites/spr_botao_ver_ranking/spr_botao_ver_ranking.yy",},},
+    {"id":{"name":"spr_botao_voltar_menu","path":"sprites/spr_botao_voltar_menu/spr_botao_voltar_menu.yy",},},
+    {"id":{"name":"spr_caixa_legenda","path":"sprites/spr_caixa_legenda/spr_caixa_legenda.yy",},},
+    {"id":{"name":"spr_frame_parabens","path":"sprites/spr_frame_parabens/spr_frame_parabens.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
