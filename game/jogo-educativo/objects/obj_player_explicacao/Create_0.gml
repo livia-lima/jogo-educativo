@@ -9,12 +9,14 @@ if (room == rm_fase2_explicacao) {
 	video_arquivo = VIDEO_FASE2;
 	cues          = legendas_fase2();
 	sala_seguinte = rm_fase2_gameplay;
+	sala_anterior = rm_start_screen;
 	player_y      = 76;
 } else {
 	fundo         = spr_bg_fase1_explicacao;
 	video_arquivo = VIDEO_FASE1;
 	cues          = legendas_fase1();
 	sala_seguinte = rm_fase1_gameplay;
+	sala_anterior = rm_nome;
 	player_y      = 102;
 }
 
@@ -66,8 +68,29 @@ alternar_mudo = function() {
 
 /// Vai para o gameplay da fase.
 sair = function() {
-	fechar_video();
-	room_goto(sala_seguinte);
+	ir_para(sala_seguinte);
 };
+
+voz_atual = -1;
+parar_voz = function() {
+	if (voz_atual != -1 && audio_is_playing(voz_atual)) audio_stop_sound(voz_atual);
+	voz_atual = -1;
+};
+
+ir_para = function(_sala) {
+	parar_voz();
+	fechar_video();
+	room_goto(_sala);
+};
+
+// Botões Voltar (esquerda) e Continuar (direita) ao lado do player.
+// Mesma seta do projeto (spr_botao_seta); no Continuar ela é espelhada.
+// Falam o próprio nome quando o mouse passa por cima (se a voz existir).
+var _cy = player_y + PLAYER_H / 2 - 24;
+escala_seta = 0.8;
+botoes = [
+	{ rotulo: "Voltar",    x: PLAYER_X / 2,                                  y: _cy, lado: 1,  voz: "snd_voz_voltar",    sala: sala_anterior, sobre: false },
+	{ rotulo: "Continuar", x: (PLAYER_X + PLAYER_W + room_width) / 2,       y: _cy, lado: -1, voz: "snd_voz_continuar", sala: sala_seguinte, sobre: false },
+];
 
 iniciar();

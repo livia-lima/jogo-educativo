@@ -31,6 +31,23 @@ if (usando_video && duracao > 0 && clicou_em(_bx1, _by - 12, _bx2, _by + 12)) {
 	fim_em = -1;
 }
 
-// Atalhos: Espaço pausa/continua, Enter pula para o jogo
+// Botões Voltar / Continuar: voz ao passar o mouse e clique para navegar
+var _bw = SETA_W * escala_seta, _bh = SETA_H * escala_seta;
+for (var _b = 0; _b < array_length(botoes); _b++) {
+	var _bt = botoes[_b];
+	var _sobre = mouse_sobre(_bt.x, _bt.y, _bw, _bh + 50);   // inclui o rótulo embaixo
+	if (_sobre && !_bt.sobre) {
+		parar_voz();
+		voz_atual = tocar_voz(_bt.voz);
+	}
+	_bt.sobre = _sobre;
+	if (_sobre && mouse_check_button_pressed(mb_left)) {
+		ir_para(_bt.sala);
+		exit;
+	}
+}
+
+// Atalhos: Espaço pausa/continua, Enter pula para o jogo, Esc volta
 if (keyboard_check_pressed(vk_space)) alternar_pausa();
 if (keyboard_check_pressed(vk_enter)) sair();
+if (keyboard_check_pressed(vk_escape)) ir_para(sala_anterior);
