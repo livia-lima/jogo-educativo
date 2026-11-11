@@ -18,6 +18,10 @@
 #macro PLAYER_H 519
 #macro PLAYER_BARRA_H 54
 
+// Botões Voltar / Continuar: tamanho da parte visível de spr_botao_seta
+#macro SETA_W 171
+#macro SETA_H 182
+
 // Caixa de legenda
 #macro LEGENDA_X 164
 #macro LEGENDA_Y 631
