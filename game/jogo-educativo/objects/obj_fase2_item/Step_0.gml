@@ -1,3 +1,6 @@
+// Popup de dica aberto: nao conta nem responde
+if (instance_exists(obj_popup_dicas_fase1)) exit;
+
 if (numero == 0 && point_distance(mouse_x, mouse_y, x, y) < 70) {
     obj_fase2_controle.contagem++;
     numero = obj_fase2_controle.contagem;
