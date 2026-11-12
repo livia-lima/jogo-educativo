@@ -19,8 +19,8 @@ if (arrastando) {
         // Limita o pino às extremidades da barra
         pos_x = clamp(mouse_x, min_x, max_x);
 
-        // Atualiza a escala da fonte (1 a 2)
-        global.escala_fonte = 1 + (pos_x - min_x) / largura;
+        // Atualiza a escala da fonte: esquerda diminui, direita aumenta, meio = normal
+        global.escala_fonte = escala_fonte_de_posicao((pos_x - min_x) / largura);
 
     } else {
         arrastando = false;

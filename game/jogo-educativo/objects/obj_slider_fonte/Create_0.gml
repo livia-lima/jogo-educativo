@@ -22,4 +22,4 @@ ajuste_pino_y = (
 ) * image_yscale;
 
 // Posição inicial do volume
-pos_x = lerp(min_x, max_x, global.escala_fonte - 1);
+pos_x = lerp(min_x, max_x, posicao_de_escala_fonte(global.escala_fonte));

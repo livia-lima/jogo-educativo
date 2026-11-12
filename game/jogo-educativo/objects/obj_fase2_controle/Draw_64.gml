@@ -27,12 +27,14 @@ draw_text_transformed(1270, 43, "x" + string(global.mult) + "  " + string(global
 // Pergunta (dentro do quadro, em cima)
 draw_set_halign(fa_center);
 draw_set_colour(c_white);
-draw_text_transformed(560, 150, objeto_atual.pergunta, _s, _s, 0);
+var _sp = escala_que_cabe(objeto_atual.pergunta, _s * escala_texto(), 940);
+draw_text_transformed(560, 150, objeto_atual.pergunta, _sp, _sp, 0);
 
 // Feedback
 if (feedback_texto != "") {
     draw_set_colour(feedback_cor);
-    draw_text_transformed(560, 690, feedback_texto, _s * 1.2, _s * 1.2, 0);
+    var _sf = escala_que_cabe(feedback_texto, _s * 1.2 * escala_texto(), 940);
+    draw_text_transformed(560, 690, feedback_texto, _sf, _sf, 0);
 }
 
 draw_set_colour(c_white);
