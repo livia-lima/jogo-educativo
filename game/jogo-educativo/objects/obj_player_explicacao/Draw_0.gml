@@ -48,6 +48,15 @@ for (var _i = 0; _i < 5; _i++) {
 draw_set_colour(c_white);
 icone_tela_cheia(_px + 799, _by);
 
+// Botões Voltar / Continuar (crescem quando o mouse está em cima)
+var _fb = fonte(FONTE_PIXELIFY, 32);
+for (var _b = 0; _b < array_length(botoes); _b++) {
+	var _bt = botoes[_b];
+	var _s = escala_seta * (_bt.sobre ? 1.08 : 1);
+	draw_sprite_ext(spr_botao_seta, 0, _bt.x, _bt.y, _s * _bt.lado, _s, 0, c_white, 1);
+	texto_sombra(_bt.x, _bt.y + SETA_H * escala_seta / 2 + 26, _bt.rotulo, _fb, escala_texto(), c_white, COR_AZUL_ESCURO, 3);
+}
+
 // Legenda
 var _texto = "", _alpha = 1;
 if (cue_atual != -1) {
