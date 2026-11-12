@@ -40,7 +40,7 @@ fonte_f2 = global.fonte_pixel;
 objetos = [
     { spr: "sprite_bicicleta",            som: "bicicleta",           pergunta: "Quantas bicicletas tem na tela?" },
     { spr: "sprite_carro",                som: "carro",               pergunta: "Quantos carros tem na tela?" },
-    { spr: "sprite_ecobag",               som: "sacolareutilizavel",  pergunta: "Quantas ecobags tem na tela?" },
+    { spr: "sprite_ecobag",               som: "sacolareutilizavel",  pergunta: "Quantas sacolas reutilizáveis tem na tela?" },
     { spr: "sprite_garrafa",              som: "garrafapl_stica",     pergunta: "Quantas garrafas tem na tela?" },
     { spr: "sprite_garrafa_reutilizavel", som: "garrafareutiliz_vel", pergunta: "Quantas garrafas reutilizáveis tem na tela?" },
     { spr: "sprite_moeda",                som: "",                    pergunta: "Quantas moedas tem na tela?" },

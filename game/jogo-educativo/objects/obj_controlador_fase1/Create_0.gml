@@ -81,7 +81,7 @@ catalogo = [
     },
     {
         id: "ecobag",
-        nome: "ECOBAG",
+        nome: "SACOLA REUTILIZÁVEL",
         sprite: spr_item_ecobag
     },
     {

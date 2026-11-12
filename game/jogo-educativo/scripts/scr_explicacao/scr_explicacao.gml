@@ -111,9 +111,32 @@ function sem_acentos(_s) {
 	return _s;
 }
 
-/// Multiplicador de fonte escolhido no menu de acessibilidade (1.0 a 2.0).
+/// Multiplicador de fonte escolhido no menu de acessibilidade (0.75 a 1.5; 1 = normal).
 function escala_texto() {
 	return variable_global_exists("escala_fonte") ? global.escala_fonte : 1;
+}
+
+#macro ESCALA_FONTE_MIN 0.75
+#macro ESCALA_FONTE_MAX 1.5
+
+/// Slider de fonte: posição (0 a 1) -> escala. O meio do slider é o tamanho normal (1x).
+function escala_fonte_de_posicao(_t) {
+	if (_t < 0.5) return lerp(ESCALA_FONTE_MIN, 1, _t / 0.5);
+	return lerp(1, ESCALA_FONTE_MAX, (_t - 0.5) / 0.5);
+}
+
+/// Slider de fonte: escala -> posição (0 a 1). Inverso de escala_fonte_de_posicao.
+function posicao_de_escala_fonte(_e) {
+	_e = clamp(_e, ESCALA_FONTE_MIN, ESCALA_FONTE_MAX);
+	if (_e < 1) return 0.5 * (_e - ESCALA_FONTE_MIN) / (1 - ESCALA_FONTE_MIN);
+	return 0.5 + 0.5 * (_e - 1) / (ESCALA_FONTE_MAX - 1);
+}
+
+/// Maior escala (até _escala) em que _txt cabe em _largura_max, com a fonte já selecionada.
+function escala_que_cabe(_txt, _escala, _largura_max) {
+	var _w = string_width(_txt);
+	if (_w <= 0) return _escala;
+	return min(_escala, _largura_max / _w);
 }
 
 /// Seleciona a fonte e devolve o texto pronto para ela.
