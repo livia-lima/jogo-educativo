@@ -2,7 +2,7 @@
 /*
     HUD DA FASE 1
     Responsabilidade: apenas desenhar os indicadores.
-    Não altera pontuação nem cronômetro.
+    Os valores vêm do Step (pontuação e tempo da fase).
 */
 
 // =====================================
@@ -20,7 +20,7 @@ var escala_acessibilidade = 1;
 
 if (variable_global_exists("escala_fonte")) {
     escala_acessibilidade = clamp(
-        global.escala_fonte, 1, 2
+        global.escala_fonte, ESCALA_FONTE_MIN, ESCALA_FONTE_MAX
     );
 }
 
@@ -100,7 +100,7 @@ draw_set_valign(fa_middle);
 var texto_pontos = string(pontos_exibidos);
 
 // Cronômetro: formato M:SS
-var tempo_total = max(0, ceil(tempo_exibido));
+var tempo_total = max(0, floor(tempo_exibido));
 
 var minutos = tempo_total div 60;
 var segundos = tempo_total mod 60;
