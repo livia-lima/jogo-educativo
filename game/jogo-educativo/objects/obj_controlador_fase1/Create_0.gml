@@ -380,6 +380,7 @@ validar_associacao = function(
     // arraste e evitar pontos duplicados.
 
     Pontuou();
+    narrar("snd_voz_acertou");
 
     show_debug_message(
         "ACERTO: "
@@ -422,6 +423,7 @@ registrar_erro = function() {
     }
 
     var _limite = Errou();
+    narrar("snd_voz_errou");
 
     show_debug_message(
         "ERRO: "

@@ -25,9 +25,15 @@ function som_item_fase1(_item_id) {
 		case "garrafa_reutilizavel": return "garrafareutiliz_vel";
 		case "sacola_plastica":      return "sacolapl_stica";
 		case "ecobag":               return "sacolareutilizavel";
-		// Sem gravação ainda: arvore, canudo_metalico, canudo_plastico,
-		// lampada_led, lixeira_reciclavel, pilha_lixo, predios,
-		// torneira_aberta, torneira_fechada
+		case "arvore":               return "arvore";
+		case "canudo_metalico":      return "canudometalico";
+		case "canudo_plastico":      return "canudoplastico";
+		case "lampada_led":          return "lampadaled";
+		case "lixeira_reciclavel":   return "lixeirareciclavel";
+		case "pilha_lixo":           return "lixo";
+		case "predios":              return "predios";
+		case "torneira_aberta":      return "torneiraaberta";
+		case "torneira_fechada":     return "torneirafechada";
 		default:                     return "";
 	}
 }
