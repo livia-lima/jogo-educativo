@@ -8,8 +8,8 @@
   "name":"obj_botao_iniciar",
   "overriddenProperties":[],
   "parent":{
-    "name":"Livia (Entrada e Fase 1)",
-    "path":"folders/Livia (Entrada e Fase 1).yy",
+    "name":"rm_start_screen",
+    "path":"folders/Livia (Entrada e Fase 1)/rm_start_screen.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -33,9 +33,6 @@
     "name":"spr_botao_iniciar",
     "path":"sprites/spr_botao_iniciar/spr_botao_iniciar.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_botao_iniciar",
-    "path":"sprites/spr_botao_iniciar/spr_botao_iniciar.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

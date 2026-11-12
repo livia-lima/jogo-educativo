@@ -1,0 +1,614 @@
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:1: trailing whitespace.
+[32m+[m[32m/* font-size */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:2: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:3: trailing whitespace.
+[32m+[m[32mbox-sizing: border-box;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:4: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:5: trailing whitespace.
+[32m+[m[32m/* Auto layout */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:6: trailing whitespace.
+[32m+[m[32mdisplay: flex;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:7: trailing whitespace.
+[32m+[m[32mflex-direction: row;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:8: trailing whitespace.
+[32m+[m[32malign-items: center;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:9: trailing whitespace.
+[32m+[m[32mpadding: 8px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:10: trailing whitespace.
+[32m+[m[32mgap: 12px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:11: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:12: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:13: trailing whitespace.
+[32m+[m[32mwidth: 276px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:14: trailing whitespace.
+[32m+[m[32mheight: 56px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:15: trailing whitespace.
+[32m+[m[32mleft: 1300px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:16: trailing whitespace.
+[32m+[m[32mtop: 656px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:17: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:18: trailing whitespace.
+[32m+[m[32mbackground: #0F2E2B;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:19: trailing whitespace.
+[32m+[m[32mborder: 2px solid #0A1F1D;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:20: trailing whitespace.
+[32m+[m[32mborder-radius: 16px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:21: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:22: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:23: trailing whitespace.
+[32m+[m[32m/* font-symbol */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:24: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:25: trailing whitespace.
+[32m+[m[32mbox-sizing: border-box;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:26: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:27: trailing whitespace.
+[32m+[m[32m/* Auto layout */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:28: trailing whitespace.
+[32m+[m[32mdisplay: flex;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:29: trailing whitespace.
+[32m+[m[32mflex-direction: column;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:30: trailing whitespace.
+[32m+[m[32mjustify-content: center;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:31: trailing whitespace.
+[32m+[m[32malign-items: center;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:32: trailing whitespace.
+[32m+[m[32mpadding: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:33: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:34: trailing whitespace.
+[32m+[m[32mwidth: 40px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:35: trailing whitespace.
+[32m+[m[32mheight: 40px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:36: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:37: trailing whitespace.
+[32m+[m[32mbackground: #2A9D8F;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:38: trailing whitespace.
+[32m+[m[32mborder: 2px solid #0A1F1D;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:39: trailing whitespace.
+[32m+[m[32mborder-radius: 12px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:40: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:41: trailing whitespace.
+[32m+[m[32m/* Inside auto layout */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:42: trailing whitespace.
+[32m+[m[32mflex: none;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:43: trailing whitespace.
+[32m+[m[32morder: 0;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:44: trailing whitespace.
+[32m+[m[32mflex-grow: 0;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:45: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:46: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:47: trailing whitespace.
+[32m+[m[32m/* font-size-indicator */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:48: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:49: trailing whitespace.
+[32m+[m[32mwidth: 28px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:50: trailing whitespace.
+[32m+[m[32mheight: 24px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:51: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:52: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:53: trailing whitespace.
+[32m+[m[32m/* Inside auto layout */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:54: trailing whitespace.
+[32m+[m[32mflex: none;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:55: trailing whitespace.
+[32m+[m[32morder: 0;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:56: trailing whitespace.
+[32m+[m[32mflex-grow: 0;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:57: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:58: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:59: trailing whitespace.
+[32m+[m[32m/* font-size-indicator-content */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:60: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:61: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:62: trailing whitespace.
+[32m+[m[32mwidth: 28px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:63: trailing whitespace.
+[32m+[m[32mheight: 24px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:64: trailing whitespace.
+[32m+[m[32mleft: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:65: trailing whitespace.
+[32m+[m[32mtop: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:66: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:67: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:68: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:69: trailing whitespace.
+[32m+[m[32m/* Small text size */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:70: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:71: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:72: trailing whitespace.
+[32m+[m[32mwidth: 10px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:73: trailing whitespace.
+[32m+[m[32mheight: 16px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:74: trailing whitespace.
+[32m+[m[32mleft: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:75: trailing whitespace.
+[32m+[m[32mtop: 8px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:76: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:77: trailing whitespace.
+[32m+[m[32mfont-family: 'Inter';[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:78: trailing whitespace.
+[32m+[m[32mfont-style: normal;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:79: trailing whitespace.
+[32m+[m[32mfont-weight: 700;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:80: trailing whitespace.
+[32m+[m[32mfont-size: 10px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:81: trailing whitespace.
+[32m+[m[32mline-height: 12px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:82: trailing whitespace.
+[32m+[m[32mdisplay: flex;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:83: trailing whitespace.
+[32m+[m[32malign-items: center;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:84: trailing whitespace.
+[32m+[m[32mtext-align: center;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:85: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:86: trailing whitespace.
+[32m+[m[32mcolor: #FFF36A;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:87: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:88: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:89: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:90: trailing whitespace.
+[32m+[m[32m/* Large text size */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:91: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:92: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:93: trailing whitespace.
+[32m+[m[32mwidth: 16px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:94: trailing whitespace.
+[32m+[m[32mheight: 24px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:95: trailing whitespace.
+[32m+[m[32mleft: 12px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:96: trailing whitespace.
+[32m+[m[32mtop: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:97: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:98: trailing whitespace.
+[32m+[m[32mfont-family: 'Inter';[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:99: trailing whitespace.
+[32m+[m[32mfont-style: normal;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:100: trailing whitespace.
+[32m+[m[32mfont-weight: 700;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:101: trailing whitespace.
+[32m+[m[32mfont-size: 18px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:102: trailing whitespace.
+[32m+[m[32mline-height: 22px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:103: trailing whitespace.
+[32m+[m[32mdisplay: flex;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:104: trailing whitespace.
+[32m+[m[32malign-items: center;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:105: trailing whitespace.
+[32m+[m[32mtext-align: center;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:106: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:107: trailing whitespace.
+[32m+[m[32mcolor: #FFF36A;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:108: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:109: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:110: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:111: trailing whitespace.
+[32m+[m[32m/* slider-track */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:112: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:113: trailing whitespace.
+[32m+[m[32mbox-sizing: border-box;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:114: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:115: trailing whitespace.
+[32m+[m[32mwidth: 200px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:116: trailing whitespace.
+[32m+[m[32mheight: 16px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:117: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:118: trailing whitespace.
+[32m+[m[32mbackground: #0A1F1D;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:119: trailing whitespace.
+[32m+[m[32mborder: 2px solid #0F2E2B;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:120: trailing whitespace.
+[32m+[m[32mborder-radius: 8px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:121: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:122: trailing whitespace.
+[32m+[m[32m/* Inside auto layout */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:123: trailing whitespace.
+[32m+[m[32mflex: none;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:124: trailing whitespace.
+[32m+[m[32morder: 1;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:125: trailing whitespace.
+[32m+[m[32mflex-grow: 0;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:126: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:127: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:128: trailing whitespace.
+[32m+[m[32m/* slider-fill */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:129: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:130: trailing whitespace.
+[32m+[m[32mbox-sizing: border-box;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:131: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:132: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:133: trailing whitespace.
+[32m+[m[32mwidth: 140px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:134: trailing whitespace.
+[32m+[m[32mheight: 12px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:135: trailing whitespace.
+[32m+[m[32mleft: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:136: trailing whitespace.
+[32m+[m[32mtop: 2px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:137: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:138: trailing whitespace.
+[32m+[m[32mbackground: #2A9D8F;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:139: trailing whitespace.
+[32m+[m[32mborder: 1px solid #0A1F1D;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:140: trailing whitespace.
+[32m+[m[32mborder-radius: 6px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:141: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:142: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:143: trailing whitespace.
+[32m+[m[32m/* slider-handle */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:144: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:145: trailing whitespace.
+[32m+[m[32mbox-sizing: border-box;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:146: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:147: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:148: trailing whitespace.
+[32m+[m[32mwidth: 16px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:149: trailing whitespace.
+[32m+[m[32mheight: 16px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:150: trailing whitespace.
+[32m+[m[32mleft: 132px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:151: trailing whitespace.
+[32m+[m[32mtop: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:152: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:153: trailing whitespace.
+[32m+[m[32mbackground: #FFF36A;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:154: trailing whitespace.
+[32m+[m[32mborder: 2px solid #0A1F1D;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slide_fonte.css:155: trailing whitespace.
+[32m+[m[32mborder-radius: 8px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:1: trailing whitespace.
+[32m+[m[32m/* volume-control */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:2: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:3: trailing whitespace.
+[32m+[m[32mbox-sizing: border-box;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:4: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:5: trailing whitespace.
+[32m+[m[32m/* Auto layout */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:6: trailing whitespace.
+[32m+[m[32mdisplay: flex;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:7: trailing whitespace.
+[32m+[m[32mflex-direction: row;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:8: trailing whitespace.
+[32m+[m[32malign-items: center;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:9: trailing whitespace.
+[32m+[m[32mpadding: 8px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:10: trailing whitespace.
+[32m+[m[32mgap: 12px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:11: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:12: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:13: trailing whitespace.
+[32m+[m[32mwidth: 276px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:14: trailing whitespace.
+[32m+[m[32mheight: 56px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:15: trailing whitespace.
+[32m+[m[32mleft: 16px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:16: trailing whitespace.
+[32m+[m[32mtop: 661px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:17: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:18: trailing whitespace.
+[32m+[m[32mbackground: #0F2E2B;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:19: trailing whitespace.
+[32m+[m[32mborder: 2px solid #0A1F1D;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:20: trailing whitespace.
+[32m+[m[32mborder-radius: 16px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:21: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:22: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:23: trailing whitespace.
+[32m+[m[32m/* volume-symbol */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:24: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:25: trailing whitespace.
+[32m+[m[32mbox-sizing: border-box;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:26: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:27: trailing whitespace.
+[32m+[m[32m/* Auto layout */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:28: trailing whitespace.
+[32m+[m[32mdisplay: flex;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:29: trailing whitespace.
+[32m+[m[32mflex-direction: column;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:30: trailing whitespace.
+[32m+[m[32mjustify-content: center;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:31: trailing whitespace.
+[32m+[m[32malign-items: center;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:32: trailing whitespace.
+[32m+[m[32mpadding: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:33: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:34: trailing whitespace.
+[32m+[m[32mwidth: 40px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:35: trailing whitespace.
+[32m+[m[32mheight: 40px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:36: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:37: trailing whitespace.
+[32m+[m[32mbackground: #2A9D8F;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:38: trailing whitespace.
+[32m+[m[32mborder: 2px solid #0A1F1D;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:39: trailing whitespace.
+[32m+[m[32mborder-radius: 12px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:40: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:41: trailing whitespace.
+[32m+[m[32m/* Inside auto layout */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:42: trailing whitespace.
+[32m+[m[32mflex: none;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:43: trailing whitespace.
+[32m+[m[32morder: 0;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:44: trailing whitespace.
+[32m+[m[32mflex-grow: 0;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:45: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:46: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:47: trailing whitespace.
+[32m+[m[32m/* megaphone */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:48: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:49: trailing whitespace.
+[32m+[m[32mwidth: 20px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:50: trailing whitespace.
+[32m+[m[32mheight: 20px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:51: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:52: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:53: trailing whitespace.
+[32m+[m[32m/* Inside auto layout */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:54: trailing whitespace.
+[32m+[m[32mflex: none;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:55: trailing whitespace.
+[32m+[m[32morder: 0;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:56: trailing whitespace.
+[32m+[m[32mflex-grow: 0;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:57: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:58: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:59: trailing whitespace.
+[32m+[m[32m/* Megaphone with sound rays */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:60: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:61: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:62: trailing whitespace.
+[32m+[m[32mwidth: 20px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:63: trailing whitespace.
+[32m+[m[32mheight: 20px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:64: trailing whitespace.
+[32m+[m[32mleft: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:65: trailing whitespace.
+[32m+[m[32mtop: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:66: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:67: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:68: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:69: trailing whitespace.
+[32m+[m[32m/* Vector */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:70: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:71: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:72: trailing whitespace.
+[32m+[m[32mleft: 5%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:73: trailing whitespace.
+[32m+[m[32mright: 35%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:74: trailing whitespace.
+[32m+[m[32mtop: 15%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:75: trailing whitespace.
+[32m+[m[32mbottom: 30%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:76: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:77: trailing whitespace.
+[32m+[m[32mbackground: #FFF36A;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:78: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:79: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:80: trailing whitespace.
+[32m+[m[32m/* Vector */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:81: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:82: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:83: trailing whitespace.
+[32m+[m[32mleft: 20%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:84: trailing whitespace.
+[32m+[m[32mright: 60%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:85: trailing whitespace.
+[32m+[m[32mtop: 50%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:86: trailing whitespace.
+[32m+[m[32mbottom: 15%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:87: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:88: trailing whitespace.
+[32m+[m[32mbackground: #FFF36A;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:89: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:90: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:91: trailing whitespace.
+[32m+[m[32m/* Vector */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:92: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:93: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:94: trailing whitespace.
+[32m+[m[32mleft: 65%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:95: trailing whitespace.
+[32m+[m[32mright: 5%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:96: trailing whitespace.
+[32m+[m[32mtop: 15%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:97: trailing whitespace.
+[32m+[m[32mbottom: 25%;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:98: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:99: trailing whitespace.
+[32m+[m[32mborder: 1.6px solid #FFF36A;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:100: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:101: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:102: trailing whitespace.
+[32m+[m[32m/* slider-track */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:103: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:104: trailing whitespace.
+[32m+[m[32mbox-sizing: border-box;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:105: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:106: trailing whitespace.
+[32m+[m[32mwidth: 200px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:107: trailing whitespace.
+[32m+[m[32mheight: 16px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:108: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:109: trailing whitespace.
+[32m+[m[32mbackground: #0A1F1D;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:110: trailing whitespace.
+[32m+[m[32mborder: 2px solid #0F2E2B;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:111: trailing whitespace.
+[32m+[m[32mborder-radius: 8px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:112: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:113: trailing whitespace.
+[32m+[m[32m/* Inside auto layout */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:114: trailing whitespace.
+[32m+[m[32mflex: none;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:115: trailing whitespace.
+[32m+[m[32morder: 1;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:116: trailing whitespace.
+[32m+[m[32mflex-grow: 0;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:117: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:118: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:119: trailing whitespace.
+[32m+[m[32m/* slider-fill */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:120: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:121: trailing whitespace.
+[32m+[m[32mbox-sizing: border-box;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:122: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:123: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:124: trailing whitespace.
+[32m+[m[32mwidth: 140px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:125: trailing whitespace.
+[32m+[m[32mheight: 12px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:126: trailing whitespace.
+[32m+[m[32mleft: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:127: trailing whitespace.
+[32m+[m[32mtop: 2px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:128: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:129: trailing whitespace.
+[32m+[m[32mbackground: #2A9D8F;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:130: trailing whitespace.
+[32m+[m[32mborder: 1px solid #0A1F1D;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:131: trailing whitespace.
+[32m+[m[32mborder-radius: 6px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:132: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:133: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:134: trailing whitespace.
+[32m+[m[32m/* slider-handle */[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:135: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:136: trailing whitespace.
+[32m+[m[32mbox-sizing: border-box;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:137: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:138: trailing whitespace.
+[32m+[m[32mposition: absolute;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:139: trailing whitespace.
+[32m+[m[32mwidth: 16px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:140: trailing whitespace.
+[32m+[m[32mheight: 16px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:141: trailing whitespace.
+[32m+[m[32mleft: 132px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:142: trailing whitespace.
+[32m+[m[32mtop: 0px;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:143: trailing whitespace.
+[32m+[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:144: trailing whitespace.
+[32m+[m[32mbackground: #FFF36A;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:145: trailing whitespace.
+[32m+[m[32mborder: 2px solid #0A1F1D;[m[41m[m
+assets/Lívia (Entrada e Fase 1)/rm_start_screen/slider_volume.css:146: trailing whitespace.
+[32m+[m[32mborder-radius: 8px;[m[41m[m
+game/jogo-educativo/objects/obj_botao_acessibilidade/Mouse_4.gml:4: trailing whitespace.
+[32m+[m[32m    meu_slider.depth = depth - 1;[m[41m [m
+game/jogo-educativo/objects/obj_botao_iniciar/Mouse_4.gml:2: trailing whitespace.
+[32m+[m[32mroom_goto(rm_nome);[m[41m [m
+game/jogo-educativo/objects/obj_botao_ranking/Mouse_4.gml:1: trailing whitespace.
+[32m+[m[32m//ao clicar com o botão esquerdo no botão de ranking, o usuário vai para a tela de[m[41m [m
+game/jogo-educativo/objects/obj_botao_som/Mouse_4.gml:5: trailing whitespace.
+[32m+[m[32m    meu_slider = instance_create_layer(x + 30, y - 2, layer, obj_slider_som);[m[41m [m
+game/jogo-educativo/objects/obj_botao_som/Mouse_4.gml:6: trailing whitespace.
+[32m+[m[32m    meu_slider.depth = depth - 1;[m[41m [m
+game/jogo-educativo/objects/obj_slider_som/Step_0.gml:5: trailing whitespace.
+[32m+[m[32m    arrastando = false;[m[41m [m

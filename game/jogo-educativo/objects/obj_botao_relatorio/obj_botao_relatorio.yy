@@ -8,8 +8,8 @@
   "name":"obj_botao_relatorio",
   "overriddenProperties":[],
   "parent":{
-    "name":"Livia (Entrada e Fase 1)",
-    "path":"folders/Livia (Entrada e Fase 1).yy",
+    "name":"rm_start_screen",
+    "path":"folders/Livia (Entrada e Fase 1)/rm_start_screen.yy",
   },
   "parentObjectId":null,
   "persistent":false,
