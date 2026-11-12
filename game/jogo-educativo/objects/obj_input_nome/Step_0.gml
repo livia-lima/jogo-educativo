@@ -46,8 +46,8 @@ if (selecionado) {
             // Salva o nome do aluno
             global.nome_aluno = _nome_validado;
 
-            // Avanca para a fase
-            room_goto(rm_fase1_gameplay);
+            // Avanca para a explicacao da Fase 1
+            room_goto(rm_fase1_explicacao);
         }
     }
 }
