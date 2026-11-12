@@ -11,6 +11,7 @@ if (!directory_exists("relatorios"))
 function ArraySaveConvert(array)
 {
 	len = array_length(array)
+	if (len == 0) return ""
 	endText = string(array[0])
 	i = 1;
 	for (i=1;i<len;i++)
@@ -50,7 +51,7 @@ function saveResultados()
 	 file_text_writeln(_file)
 	 
 	file_text_write_string(_file,"fase1Feita: ");
-	 if (global.acertos_fase1 == global.acertosParaFimDeFase)
+	 if (global.fase1_concluida)
 		 file_text_write_string(_file,string(1))
 	 else
 		 file_text_write_string(_file,string(0))
@@ -78,7 +79,7 @@ function saveResultados()
 	 file_text_writeln(_file)
 	 
 	file_text_write_string(_file,"fase2Feita: ");
-	 if (global.acertos_fase2 == global.acertosParaFimDeFase)
+	 if (global.fase2_concluida)
 		 file_text_write_string(_file,string(1))
 	 else
 		 file_text_write_string(_file,string(0))

@@ -3,36 +3,15 @@ randomize(); // Garante que os sorteios da Fase 2 sejam sempre aleatórios
 
 global.CONTROLLER = self;
 
-// Variáveis de Jogador e Relatório (Base para o trabalho do Vitor)
-global.nome_aluno = "";
-global.pontuacao = 0;
-global.faseAtual = 0; // indicador de fase. (0 = nenhuma)
+// Variáveis de Jogador e Relatório: zeradas em NovaPartida (ScoreScript),
+// chamada aqui e de novo sempre que um nome é confirmado.
+NovaPartida("");
 global.alvoDeLeitura = "";
 
 global._tempoMult = time_source_create(time_source_game,30,time_source_units_seconds,resetaMult)
 // ^ timer para reset de mult.
 
-global.mult = 1; //        ˅
-global._time = [0,0,0]; // usado em ScoreScript
-global._Erros = 0; //      ˄
-
-global._faseStart1 = [0,0,0] // usados para calcular o tempo gasto em
-global._faseStart2 = [0,0,0] // cada fase.
-
-global.acertos_fase1 = 0;
-global.erros_fase1 = 0;
-global.tempoEntreAcertos_fase1 = [0,0,0,0,0,0];
-global.tempoGasto_fase1 = 0;
-global.tentativas_fase1 = 0; // incrementar quando tentar a fase 1 novamente
-
-global.acertos_fase2 = 0;
-global.erros_fase2 = 0;
-global.tempoGasto_fase2 = 0;
-global.tempoEntreAcertos_fase2 = [0,0,0,0,0,0];
-global.tentativas_fase2 = 0; // incrementar quando tentar a fase 2 novamente
-
-global.acertosParaFimDeFase = 6
-global.errosParaFimDeFase = 12
+global.errosParaFimDeFase = 3 // erros numa tentativa para ir à tela de falha (as duas fases)
 
 if (!file_exists("ranking.txt")) gerarRanking() // gera um ranking placeholder
 // Controle de Rodadas

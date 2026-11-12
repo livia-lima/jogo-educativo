@@ -15,9 +15,9 @@ acertos_rodada = 0;
 rodada_concluida = false;
 fase_concluida = false;
 
-// Erros na fase para ir a tela "voce falhou" (mesma regra da Fase 2)
-max_erros = 3;
-global.erros_fase1 = 0;
+// Pontuacao, tempo e erros da tentativa (ScoreScript).
+// O limite de erros para a tela "voce falhou" e global.errosParaFimDeFase.
+FaseTimeStart(1);
 indo_para_falha = false;
 
 ids_acertados = [];
@@ -372,17 +372,14 @@ validar_associacao = function(
     acertos_rodada++;
 
     // =================================
-    // TODO: INTEGRACAO COM PONTUACAO
+    // PONTUACAO
     // =================================
 
-    // Quando a branch de pontuacao
-    // for integrada, descomentar:
-    //
-    // Pontuou();
-    //
-    // Essa chamada fica aqui para
+    // Fica aqui (e nao nas cartas) para
     // funcionar nos dois sentidos de
     // arraste e evitar pontos duplicados.
+
+    Pontuou();
 
     show_debug_message(
         "ACERTO: "
@@ -414,8 +411,9 @@ validar_associacao = function(
 // =====================================
 
 // Chamado pelas cartas quando a associacao esta errada.
-// Ao chegar em max_erros, espera 1,5 s (para a animacao
-// de erro aparecer) e vai para rm_fase1_falha (Alarm 1).
+// Errou() conta o erro no relatorio. Ao chegar no limite,
+// espera 1,5 s (para a animacao de erro aparecer) e vai
+// para rm_fase1_falha (Alarm 1).
 
 registrar_erro = function() {
 
@@ -423,16 +421,16 @@ registrar_erro = function() {
         return;
     }
 
-    global.erros_fase1++;
+    var _limite = Errou();
 
     show_debug_message(
         "ERRO: "
-        + string(global.erros_fase1)
+        + string(global._Erros)
         + "/"
-        + string(max_erros)
+        + string(global.errosParaFimDeFase)
     );
 
-    if (global.erros_fase1 >= max_erros) {
+    if (_limite) {
         indo_para_falha = true;
         alarm[1] = game_get_speed(gamespeed_fps) * 1.5;
     }

@@ -35,5 +35,6 @@ if (fase_concluida) {
     // Vai direto para a explicacao da Fase 2. Nao usar room_next():
     // ele segue a ordem das rooms do projeto, que nao e a ordem do jogo
     // (a sala seguinte a rm_fase1_gameplay era rm_relatorio).
+    FaseConcluida(1);
     room_goto(rm_fase2_explicacao);
 }

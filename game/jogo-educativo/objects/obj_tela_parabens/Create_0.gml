@@ -3,6 +3,12 @@
 // botões "Ver ranking" e "Voltar ao menu" um embaixo do outro.
 // Voz e animações seguem o mesmo relógio (tempo, em ms).
 
+// Fim da partida: salva relatório e ranking (SaveSystem do Vitor).
+// Só salva se veio do jogo (Fase 2 concluída), não ao abrir a room sozinha.
+if (variable_global_exists("fase2_concluida") && global.fase2_concluida && global.nome_aluno != "") {
+	FimDeJogo();
+}
+
 tempo = 0;
 pontos_final     = variable_global_exists("pontuacao") ? global.pontuacao : 0;
 pontos_mostrados = 0;
