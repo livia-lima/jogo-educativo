@@ -12,7 +12,6 @@
   "ResourceOrderSettings":[
     {"name":"PixelifySansRelatorio","order":1,"path":"fonts/PixelifySansRelatorio/PixelifySansRelatorio.yy",},
     {"name":"PixelifySansTitleRelatorio","order":3,"path":"fonts/PixelifySansTitleRelatorio/PixelifySansTitleRelatorio.yy",},
-    {"name":"obj_botaoRelatorio","order":2,"path":"objects/obj_botaoRelatorio/obj_botaoRelatorio.yy",},
     {"name":"obj_leaderboardCell","order":1,"path":"objects/obj_leaderboardCell/obj_leaderboardCell.yy",},
     {"name":"obj_menuReturn","order":6,"path":"objects/obj_menuReturn/obj_menuReturn.yy",},
     {"name":"obj_pageButton1","order":1,"path":"objects/obj_pageButton1/obj_pageButton1.yy",},
