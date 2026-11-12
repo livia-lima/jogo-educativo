@@ -1,19 +1,25 @@
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-
+// Os sprites têm origem no canto de cima, então desenha centralizado em x,y
 if (sprite_index != -1) {
-    draw_sprite_ext(sprite_index, image_index, x, y, escala, escala, 0, c_white, 1);
+    var _e = escala * escala_base;
+    var _w = sprite_get_width(sprite_index) * _e;
+    var _h = sprite_get_height(sprite_index) * _e;
+    draw_sprite_ext(sprite_index, image_index, x - _w/2, y - _h/2, _e, _e, 0, c_white, 1);
 } else {
-    // Provisório até chegar a imagem
     draw_set_colour(c_aqua);
     draw_circle(x, y, 50 * escala, false);
-    draw_set_colour(c_black);
-    draw_text(x, y, "BIKE");
 }
 
 if (numero > 0) {
+    var _f = global.fonte_pixel;
+    var _s = (_f != -1) ? 2 : 3;
+    if (_f != -1) draw_set_font(_f);
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+    draw_set_colour(c_black);
+    draw_text_transformed(x + 2, y - 85, string(numero), _s, _s, 0);
     draw_set_colour(c_yellow);
-    draw_text_transformed(x, y - 80, string(numero), 3, 3, 0);
+    draw_text_transformed(x, y - 87, string(numero), _s, _s, 0);
+    draw_set_font(-1);
 }
 
 draw_set_colour(c_white);

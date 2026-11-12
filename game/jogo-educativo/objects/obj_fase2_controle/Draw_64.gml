@@ -1,29 +1,41 @@
-draw_set_valign(fa_top);
+// HUD da Fase 2 (as imagens ficam na camada tela_fase2 da room)
+var _s = (fonte_f2 != -1) ? 1 : 2;   // fonte padrão é pequena, então aumenta
+if (fonte_f2 != -1) draw_set_font(fonte_f2);
+
+draw_set_valign(fa_middle);
 draw_set_halign(fa_left);
-draw_set_colour(c_white);
 
-// Botão sair (provisório)
-draw_rectangle(10, 10, 80, 80, true);
-draw_text(22, 36, "Sair");
-
+// Moedas (ao lado da sprite_moeda)
 var _t = floor((current_time - inicio_rodada) / 1000);
-draw_text_transformed(120, 25, "Moedas: " + string(global.pontuacao), 2, 2, 0);
-draw_text_transformed(480, 25, "Tempo: " + string(_t) + "s", 2, 2, 0);
-draw_text_transformed(740, 25, "x" + string(multiplicador), 2, 2, 0);
-draw_text_transformed(900, 25, "Rodada " + string(global.rodada_rounds_fase2) + "/" + string(global.total_rounds_fase2), 2, 2, 0);
+draw_set_colour(c_black);
+draw_text_transformed(362, 45, string(global.pontuacao), _s * 1.5, _s * 1.5, 0);
+draw_set_colour(c_white);
+draw_text_transformed(360, 43, string(global.pontuacao), _s * 1.5, _s * 1.5, 0);
 
-// Pergunta
+// Tempo (ao lado da sprite_timer)
+var _txt_t = string(_t div 60) + ":" + string_replace_all(string_format(_t mod 60, 2, 0), " ", "0");
+draw_set_colour(c_black);
+draw_text_transformed(812, 45, _txt_t, _s * 1.5, _s * 1.5, 0);
+draw_set_colour(c_white);
+draw_text_transformed(810, 43, _txt_t, _s * 1.5, _s * 1.5, 0);
+
+// Multiplicador e rodada
+draw_set_halign(fa_right);
+draw_set_colour(c_yellow);
+draw_text_transformed(1270, 43, "x" + string(multiplicador) + "  " + string(global.rodada_rounds_fase2) + "/" + string(global.total_rounds_fase2), _s, _s, 0);
+
+// Pergunta (dentro do quadro, em cima)
 draw_set_halign(fa_center);
-draw_text_transformed(570, 85, "Quantas bicicletas tem na tela?", 2, 2, 0);
-
-// Molduras provisórias
-draw_rectangle(area_x1, area_y1, area_x2, area_y2, true);
-draw_rectangle(1130, 120, 1330, 740, true);
+draw_set_colour(c_white);
+draw_text_transformed(560, 150, objeto_atual.pergunta, _s, _s, 0);
 
 // Feedback
 if (feedback_texto != "") {
     draw_set_colour(feedback_cor);
-    draw_text_transformed(570, 700, feedback_texto, 2.5, 2.5, 0);
+    draw_text_transformed(560, 690, feedback_texto, _s * 1.2, _s * 1.2, 0);
 }
+
 draw_set_colour(c_white);
 draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_font(-1);

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"tentardenovo",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.0410885,
+  "exportDir":"",
+  "name":"tentardenovo",
+  "parent":{
+    "name":"Yasmin (Fase 2 e Falhas)",
+    "path":"folders/Yasmin (Fase 2 e Falhas).yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"tentardenovo.ogg",
+  "volume":1.0,
+}
