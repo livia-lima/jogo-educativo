@@ -15,6 +15,11 @@ acertos_rodada = 0;
 rodada_concluida = false;
 fase_concluida = false;
 
+// Erros na fase para ir a tela "voce falhou" (mesma regra da Fase 2)
+max_erros = 3;
+global.erros_fase1 = 0;
+indo_para_falha = false;
+
 ids_acertados = [];
 cartoes_rodada = [];
 
@@ -402,6 +407,35 @@ validar_associacao = function(
     }
 
     return true;
+};
+
+// =====================================
+// 8.1 REGISTRAR ERRO
+// =====================================
+
+// Chamado pelas cartas quando a associacao esta errada.
+// Ao chegar em max_erros, espera 1,5 s (para a animacao
+// de erro aparecer) e vai para rm_fase1_falha (Alarm 1).
+
+registrar_erro = function() {
+
+    if (rodada_concluida || fase_concluida || indo_para_falha) {
+        return;
+    }
+
+    global.erros_fase1++;
+
+    show_debug_message(
+        "ERRO: "
+        + string(global.erros_fase1)
+        + "/"
+        + string(max_erros)
+    );
+
+    if (global.erros_fase1 >= max_erros) {
+        indo_para_falha = true;
+        alarm[1] = game_get_speed(gamespeed_fps) * 1.5;
+    }
 };
 
 // =====================================

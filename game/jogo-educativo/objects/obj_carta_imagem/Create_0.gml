@@ -18,3 +18,6 @@ deslocamento_y = 0;
 // Feedback visual
 erro_frames = 0;
 acerto_frames = 0;
+
+// Narracao: fala o item ao passar o mouse
+mouse_em_cima = false;
