@@ -162,6 +162,9 @@ if (
         erro_frames = 22;
         _alvo.erro_frames = 22;
 
+        // Conta o erro na fase (3 erros -> tela "voce falhou")
+        controlador.registrar_erro();
+
         // =================================
         // TODO: INTEGRACAO COM PONTUACAO
         // =================================
