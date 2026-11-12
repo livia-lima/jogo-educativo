@@ -86,7 +86,7 @@ catalogo = [
     },
     {
         id: "garrafa",
-        nome: "GARRAFA",
+        nome: "GARRAFA PLÁSTICA",
         sprite: spr_item_garrafa
     },
     {

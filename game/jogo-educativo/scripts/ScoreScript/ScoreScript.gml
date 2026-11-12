@@ -7,7 +7,7 @@ Uma resposta correta aumenta a pontuação do próximo acerto por +1x.
 (1x, 2x, 3x, 4x, 5x, 6x, etc).
 O multiplicador permanece no valor dado por 30 segundos. Após 30s, retorna à 1x.
 Multiplicadores não passam de uma fase para outra.
-Erro: O multiplicador instantaneamente retorna para 1x.
+Erro: -25 pontos e o multiplicador instantaneamente retorna para 1x.
 Não é possível ter pontuação negativa.
 
 // --- ---=--- -- */
@@ -123,6 +123,8 @@ function Errou()
 		global.erros_fase1++;
 	else
 		global.erros_fase2++;
+	// Perde pontos no erro, sem ficar negativo
+	global.pontuacao = max(0, global.pontuacao - global.pontosPorErro);
 	resetaMult()
 	return global._Erros >= global.errosParaFimDeFase;
 }
