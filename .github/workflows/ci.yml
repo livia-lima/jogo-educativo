@@ -31,7 +31,7 @@ jobs:
           falhou=0
           # GitHub recusa arquivos > 100 MB; acima de 25 MB já é sinal de build/vídeo commitado
           while IFS= read -r -d '' f; do
-            tam=$(stat -c %s "$f")
+            tam=$(stat -c %s -- "$f")
             if [ "$tam" -gt $((25*1024*1024)) ]; then
               echo "::error file=$f::arquivo com $((tam/1024/1024)) MB — não commite builds ou mídia pesada"
               falhou=1
