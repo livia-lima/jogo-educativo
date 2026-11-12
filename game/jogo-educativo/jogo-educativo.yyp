@@ -34,6 +34,8 @@
     {"$GMIncludedFile":"","%Name":"PixelifySans-VariableFont_wght.ttf","CopyToMask":-1,"filePath":"datafiles/fonts","name":"PixelifySans-VariableFont_wght.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"PixelifySans.ttf","CopyToMask":-1,"filePath":"datafiles/fonts","name":"PixelifySans.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"PressStart2P.ttf","CopyToMask":-1,"filePath":"datafiles/fonts","name":"PressStart2P.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"fase1_explicacao.mp4","CopyToMask":-1,"filePath":"datafiles/videos","name":"fase1_explicacao.mp4","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"fase2_explicacao.mp4","CopyToMask":-1,"filePath":"datafiles/videos","name":"fase2_explicacao.mp4","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],

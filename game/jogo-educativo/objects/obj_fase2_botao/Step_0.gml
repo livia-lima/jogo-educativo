@@ -1,3 +1,6 @@
+// Popup de dica aberto: nao conta nem responde
+if (instance_exists(obj_popup_dicas_fase1)) exit;
+
 var _antes = hover;
 hover = point_in_rectangle(mouse_x, mouse_y, x - largura/2, y - altura/2, x + largura/2, y + altura/2);
 
