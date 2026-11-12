@@ -106,7 +106,7 @@ catalogo = [
     },
     {
         id: "pilha_lixo",
-        nome: "PILHA DE LIXO",
+        nome: "LIXO",
         sprite: spr_item_pilha_lixo
     },
     {
