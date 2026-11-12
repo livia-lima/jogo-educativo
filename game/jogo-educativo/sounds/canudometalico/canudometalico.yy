@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"canudometalico",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.0,
+  "exportDir":"",
+  "name":"canudometalico",
+  "parent":{
+    "name":"Core",
+    "path":"folders/Core.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"canudometalico.ogg",
+  "volume":1.0,
+}

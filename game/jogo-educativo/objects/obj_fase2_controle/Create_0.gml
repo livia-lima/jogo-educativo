@@ -139,10 +139,11 @@ verificar = function(_valor) {
         Pontuou();
         feedback_texto = "Muito bem! São " + string(resposta) + "!";
         feedback_cor = c_lime;
-        tocar_som("snd_acerto");
+        falar("snd_voz_acertou");
         alarm[0] = _fps * 1.5;   // próxima rodada
     } else {
         chegou_no_limite = Errou();
+        falar("snd_voz_errou");
         feedback_texto = "Quase! Vamos contar de novo.";
         feedback_cor = c_orange;
         alarm[1] = _fps * 1.5;   // tenta de novo ou vai pra falha
