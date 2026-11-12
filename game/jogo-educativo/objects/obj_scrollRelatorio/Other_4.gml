@@ -2,13 +2,14 @@
 // numero de colunas e linhas, etc.
 
 var files = 0;
-var SEARCH = file_find_first("/relatorios/*.txt",0);
+var SEARCH = file_find_first("relatorios/*.txt",0);
 // quantos arquivos existem no momento?
 while SEARCH != ""
 {
 	files++;
 	SEARCH = file_find_next()
 }
+file_find_close();
 
 //show_debug_message("found: " + string(files));
 self.buttons = files;
@@ -28,7 +29,7 @@ menu = ds_grid_create(self.cols,self.rows);
 
 load_menu_data = function()
 {
-	var SEARCH = file_find_first("/relatorios/*.txt",0);
+	var SEARCH = file_find_first("relatorios/*.txt",0);
 	var r = 0
 	var c = 0
 	// quantos arquivos existem no momento?
@@ -67,6 +68,7 @@ load_menu_data = function()
 		}
 		SEARCH = file_find_next()
 	}
+	file_find_close();
 }
 
 load_menu_data()
