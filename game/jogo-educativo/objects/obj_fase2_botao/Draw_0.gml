@@ -8,7 +8,7 @@ if (hover) {
 }
 
 var _f = global.fonte_pixel;
-var _s = (_f != -1) ? 4 : 6;
+var _s = (_f != -1) ? 3.5 : 5.3;
 if (_f != -1) draw_set_font(_f);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);

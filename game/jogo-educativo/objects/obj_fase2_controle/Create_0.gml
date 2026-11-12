@@ -21,12 +21,12 @@ feedback_cor = c_white;
 inicio_rodada = current_time;
 
 // Área onde os objetos aparecem (dentro do quadro grande)
-area_x1 = 70;  area_y1 = 190;
-area_x2 = 1050; area_y2 = 700;
+area_x1 = 144; area_y1 = 238;
+area_x2 = 1006; area_y2 = 687;
 
 // Centro das 4 casinhas da coluna da direita (botao_frame_answer)
-botao_x = 1233;
-botao_y = [195, 348, 498, 655];
+botao_x = 1167;
+botao_y = [242, 377, 509, 647];
 
 // Fonte pixel (PressStart2P, dos Included Files). Se não achar, usa a padrão.
 if (!variable_global_exists("fonte_pixel")) {

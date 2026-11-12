@@ -1,4 +1,4 @@
 valor = 0;
-largura = 190;
-altura = 135;
+largura = 167;
+altura = 119;
 hover = false;
