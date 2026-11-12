@@ -2,7 +2,7 @@
 // numero de colunas e linhas, etc.
 readTarget = global.alvoDeLeitura
 //show_debug_message("Search: " + readTarget[0])
-_FILE = file_text_open_read("/relatorios/" + readTarget[0])
+_FILE = file_text_open_read("relatorios/" + readTarget[0])
 if (_FILE == -1){
 	show_debug_message("Erro, arquivo inexistente.")
 	room_goto(rm_relatorio)
