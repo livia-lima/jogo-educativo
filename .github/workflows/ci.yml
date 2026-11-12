@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validar-gamemaker:
+    name: Validar projeto GameMaker
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validar .yyp, recursos, referências e GML
+        run: python3 .github/scripts/validar_gamemaker.py
+
+      - name: Bloquear arquivos grandes e builds no repositório
+        run: |
+          set -e
+          falhou=0
+          # GitHub recusa arquivos > 100 MB; acima de 25 MB já é sinal de build/vídeo commitado
+          while IFS= read -r -d '' f; do
+            tam=$(stat -c %s "$f")
+            if [ "$tam" -gt $((25*1024*1024)) ]; then
+              echo "::error file=$f::arquivo com $((tam/1024/1024)) MB — não commite builds ou mídia pesada"
+              falhou=1
+            fi
+          done < <(git ls-files -z)
+          if git ls-files | grep -E '\.(dmg|exe|apk|aab|yyz|zip)$'; then
+            echo "::error::arquivos de build no repositório (veja a lista acima); eles devem ficar no .gitignore"
+            falhou=1
+          fi
+          exit $falhou
