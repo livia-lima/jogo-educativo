@@ -43,8 +43,8 @@ if (selecionado) {
 
             nome_digitado = _nome_validado;
 
-            // Salva o nome do aluno
-            global.nome_aluno = _nome_validado;
+            // Nova partida: zera os dados do jogador anterior e salva o nome
+            NovaPartida(_nome_validado);
 
             // Avanca para a explicacao da Fase 1
             room_goto(rm_fase1_explicacao);

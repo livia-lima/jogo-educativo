@@ -1,4 +1,4 @@
-if (global.erros_fase2 >= max_erros) {
+if (chegou_no_limite) {
     room_goto(rm_fase2_falha);
 } else {
     feedback_texto = "";
