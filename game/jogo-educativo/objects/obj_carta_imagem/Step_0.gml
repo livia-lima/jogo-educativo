@@ -26,6 +26,26 @@ if (associada) {
 }
 
 // =====================================
+// 1.1 NARRACAO
+// =====================================
+
+// Ao passar o mouse (sem estar arrastando), fala o nome do item.
+var _sobre = point_in_rectangle(
+    mouse_x,
+    mouse_y,
+    x - (room_width * 0.17) / 2,
+    y - (room_height * 0.15) / 2,
+    x + (room_width * 0.17) / 2,
+    y + (room_height * 0.15) / 2
+);
+
+if (_sobre && !mouse_em_cima && !arrastando) {
+    narrar(som_item_fase1(item_id));
+}
+
+mouse_em_cima = _sobre;
+
+// =====================================
 // 2. DETECTAR CLIQUE
 // =====================================
 
