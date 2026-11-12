@@ -12,6 +12,7 @@ global._tempoMult = time_source_create(time_source_game,30,time_source_units_sec
 // ^ timer para reset de mult.
 
 global.errosParaFimDeFase = 3 // erros numa tentativa para ir à tela de falha (as duas fases)
+global.pontosPorErro = 25     // pontos perdidos a cada erro (as duas fases; nunca fica negativo)
 
 if (!file_exists("ranking.txt")) gerarRanking() // gera um ranking placeholder
 // Controle de Rodadas
