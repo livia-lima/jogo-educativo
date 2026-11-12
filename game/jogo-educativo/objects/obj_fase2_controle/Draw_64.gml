@@ -22,7 +22,7 @@ draw_text_transformed(810, 43, _txt_t, _s * 1.5, _s * 1.5, 0);
 // Multiplicador e rodada
 draw_set_halign(fa_right);
 draw_set_colour(c_yellow);
-draw_text_transformed(1270, 43, "x" + string(global.mult) + "  " + string(global.rodada_rounds_fase2) + "/" + string(global.total_rounds_fase2), _s, _s, 0);
+draw_text_transformed(1210, 43, "x" + string(global.mult) + "  " + string(global.rodada_rounds_fase2) + "/" + string(global.total_rounds_fase2), _s, _s, 0);
 
 // Pergunta (dentro do quadro, em cima)
 draw_set_halign(fa_center);
